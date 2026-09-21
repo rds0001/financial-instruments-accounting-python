@@ -12,7 +12,7 @@ license = "Apache-2.0"
 license-files = ["LICENSE", "NOTICE"]
 authors = [{name = "RiskDataScience GmbH"}]
 maintainers = [{name = "RiskDataScience GmbH", email = "riskdatascience@web.de"}]
-dependencies = ["openpyxl==3.1.5", "PyYAML==6.0.2"]
+dependencies = ["openpyxl==3.1.5", "PyYAML==6.0.3"]
 classifiers = [
   "Development Status :: 4 - Beta",
   "Programming Language :: Python :: 3",
