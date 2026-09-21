@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=77.0.3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "financial-instruments-accounting"
+version = "1.0.0"
+description = "Granular financial instrument accounting, impairment and audit reference library"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{name = "RiskDataScience GmbH"}]
+maintainers = [{name = "RiskDataScience GmbH", email = "riskdatascience@web.de"}]
+dependencies = ["openpyxl==3.1.5", "PyYAML==6.0.2"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Office/Business :: Financial :: Accounting",
+  "Typing :: Typed",
+]
+
+[project.urls]
+Source = "https://github.com/rds0001/financial-instruments-accounting-python"
+Issues = "https://github.com/rds0001/financial-instruments-accounting-python/issues"
+Imprint = "https://riskdatascience.net/impressum/"
+"Privacy Policy" = "https://riskdatascience.net/datenschutzerklaerung/"
+
+[project.optional-dependencies]
+test = ["pytest>=8", "hypothesis>=6"]
+dev = ["build", "twine", "ruff", "mypy", "sphinx", "types-PyYAML"]
+
+[project.scripts]
+financial-instruments-accounting = "financial_accounting_engine._cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+financial_accounting_engine = ["py.typed", "resources/**/*", "resources/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+files = ["src/financial_accounting_engine"]
+
+[[tool.mypy.overrides]]
+module = ["financial_accounting_engine._engine.*"]
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = ["openpyxl.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["financial_accounting_engine.domains", "financial_accounting_engine.data", "financial_accounting_engine.workflow"]
+disable_error_code = ["no-untyped-call"]

@@ -1,0 +1,46 @@
+# Copyright 2026 RiskDataScience GmbH
+# SPDX-License-Identifier: Apache-2.0
+profile_id: SMALL_SA_RETAIL_FIA
+profile_version: 1.0.0
+seed: 9022027
+base_date: '2026-12-31'
+description: Synthetische Retail-/SME-Bank ohne Handelsbuch und Hedge Accounting.
+profile_transformations: {entity_id: ENTITY_SYNTH, portfolio_from: instrument_type, transaction_price_from: fair_value, transaction_cost_rate: 0.001, initial_recognition_date: '2022-01-01', maturity_date: '2031-12-31'}
+instrument_defaults: {impairment_scope: GENERAL_ECL, ecl_method: COMPONENT_PD_LGD_EAD, provision_rate: 0.0, poci_initial_lifetime_ecl: 0.0, credit_adjusted_eir: 0.0, guarantee_amount: 0.0, regular_way: false, trade_date_policy: TRADE_DATE, scope_assessment: IN_IFRS9_SCOPE, recognition_status: RECOGNISED, own_use: false, nature_dependent_contract: false, purchaser_net_buyer: false, quantity_consistent_expected_usage: false, sale_timing_uncontrollable: false, repurchase_within_reasonable_time: false, fair_value_option: false, designation_approval_id: SYNTH-DESIGNATION-APPROVAL, hybrid_contract: false, host_contract_type: NONE, embedded_derivative_separated: false, electronic_payment_election: false, payment_irrevocable: false, withdrawal_access_practical: false, settlement_risk_insignificant: false, settlement_short_period: false, rate_type: FIXED, reset_rate: null, interface_standard: null, interface_decision_id: null, interface_approved: false, regulatory_approach: CRR_STANDARDISED_SOURCE_ONLY, regulatory_default_flag: false, regulatory_expected_loss: 0.0, overlay_id: null, overlay_owner: null, overlay_approved: false, overlay_expiry: null, overlay_thesis: null, overlay_double_count_checked: false}
+classification_defaults: {principal_consistent: true, basic_interest: true, leverage: false, modified_time_value_pass: true, prepayment_compensation_reasonable: true, extension_basic: true, non_recourse_pass: true, cli_lookthrough_pass: true, contingent_feature_basic: true, de_minimis_or_non_genuine: false, sppi_override: null, designation: NONE, approval_id: SYNTH-CLASS-APPROVAL, business_model_change: false}
+classification_overrides: {}
+staging_defaults: {unlikely_to_pay: false, forward_looking_sicr: false, low_credit_risk: false, collective_assessment: false, sicr_rebuttal: false, sicr_override: null, override_reason: null, override_approved: false, override_expiry: null, months_since_cure: 99, months_since_forbearance: 99}
+collateral:
+  - {collateral_id: S-COL-MORT, instrument_id: S_MORT_01, collateral_type: RESIDENTIAL_PROPERTY, fair_value: 230000, haircut: 0.20, cost: 9000, recovery_year: 2, allocated_amount: 170000, separately_recognised: false}
+events: []
+hedge_defaults: {hedging_instrument_eligible: true, hedged_item_eligible: true, risk_component_eligible: true, designation_documented: true, risk_management_objective: NOT_APPLICABLE, target_hedge_ratio: 1.0, rebalancing_required: false, discontinue: false, forecast_transaction_expected: true, option_time_value_change: 0, forward_element_change: 0, basis_spread_change: 0, recycle_amount: 0, basis_adjustment: 0}
+model_assumptions:
+  horizon_years: 5
+  annual_pd_growth: 0.10
+  workout_cost_rate: 0.01
+  prepayment_rate: 0.0
+  mean_reversion_method: LINEAR_TO_LONG_RUN
+  base_pd_by_rating: {1: 0.001, 2: 0.002, 3: 0.006, 4: 0.014, 5: 0.03, 6: 0.06, 7: 0.10, 8: 0.18, 9: 0.30, 10: 0.52}
+  scenario_pd_multiplier: {BASE: 1.0, UPSIDE: 0.72, DOWNSIDE: 1.60}
+  scenario_lgd_multiplier: {BASE: 1.0, UPSIDE: 0.92, DOWNSIDE: 1.18}
+  ead_decay_by_year: [1.0, 0.80, 0.60, 0.42, 0.25]
+  commitment_ccf: 0.50
+scenarios:
+  - {scenario_id: BASE, weight: 0.60}
+  - {scenario_id: UPSIDE, weight: 0.15}
+  - {scenario_id: DOWNSIDE, weight: 0.25}
+instruments:
+  - {instrument_id: S_MORT_01, instrument_type: RETAIL_MORTGAGE, currency: EUR, gross_amount: 180000, fair_value: 181000, business_model: HOLD_TO_COLLECT, sppi_pass: true, eir: 0.031, stage_hint: STAGE_1, days_past_due: 0, rating_orig: 3, rating_current: 3, lgd: 0.16, undrawn: 0, overlay: 0}
+  - {instrument_id: S_MORT_02, instrument_type: RETAIL_MORTGAGE, currency: EUR, gross_amount: 220000, fair_value: 210000, business_model: HOLD_TO_COLLECT, sppi_pass: true, eir: 0.035, stage_hint: STAGE_2, days_past_due: 31, rating_orig: 3, rating_current: 5, lgd: 0.22, undrawn: 0, overlay: 90, overlay_id: S-OVL-01, overlay_owner: MODEL_OWNER, overlay_approved: true, overlay_expiry: '2027-03-31', overlay_thesis: SYNTHETIC_RETAIL_RISK, overlay_double_count_checked: true}
+  - {instrument_id: S_SME_03, instrument_type: SME_LOAN, currency: EUR, gross_amount: 160000, fair_value: 135000, business_model: HOLD_TO_COLLECT, sppi_pass: true, eir: 0.052, stage_hint: STAGE_3, days_past_due: 100, rating_orig: 5, rating_current: 10, credit_impaired: true, lgd: 0.60, undrawn: 20000, overlay: 0}
+  - {instrument_id: S_TRADE_04, instrument_type: TRADE_RECEIVABLE, currency: EUR, gross_amount: 30000, fair_value: 30000, business_model: HOLD_TO_COLLECT, sppi_pass: true, ecl_method: PROVISION_MATRIX, provision_rate: 0.035, eir: 0, simplified: true, stage_hint: SIMPLIFIED_LIFETIME, days_past_due: 15, rating_orig: 5, rating_current: 5, lgd: 0.35, undrawn: 0, overlay: 0}
+  - {instrument_id: S_COMMIT_05, instrument_type: LOAN_COMMITMENT, currency: EUR, gross_amount: 0, fair_value: 0, business_model: HOLD_TO_COLLECT, sppi_pass: true, eir: 0.045, stage_hint: STAGE_1, days_past_due: 0, rating_orig: 4, rating_current: 4, lgd: 0.40, undrawn: 100000, overlay: 0}
+expected_cashflows: []
+hedges: []
+backtesting_observations:
+  - {observation_id: S-BT-PD-01, model_type: PD, model_version_id: SYNTH_PD_V1, challenger_flag: false, segment: RETAIL, observation_date: '2026-06-30', predicted_value: 0.02, actual_value: 1.0, exposure_weight: 1, outcome_flag: true, release_amount: 0, model_owner: SYNTHETIC_MODEL_OWNER, validation_status: VALIDATED, approval_id: SYNTH-MODEL-APPROVAL}
+  - {observation_id: S-BT-PD-02, model_type: PD, model_version_id: SYNTH_PD_V1, challenger_flag: false, segment: RETAIL, observation_date: '2026-06-30', predicted_value: 0.01, actual_value: 0.0, exposure_weight: 99, outcome_flag: false, release_amount: 0, model_owner: SYNTHETIC_MODEL_OWNER, validation_status: VALIDATED, approval_id: SYNTH-MODEL-APPROVAL}
+  - {observation_id: S-BT-LGD-01, model_type: LGD, model_version_id: SYNTH_LGD_V1, challenger_flag: false, segment: SME, observation_date: '2026-06-30', predicted_value: 0.55, actual_value: 0.58, exposure_weight: 1, outcome_flag: true, release_amount: 0, model_owner: SYNTHETIC_MODEL_OWNER, validation_status: VALIDATED, approval_id: SYNTH-MODEL-APPROVAL}
+  - {observation_id: S-BT-EAD-01, model_type: EAD, model_version_id: SYNTH_EAD_V1, challenger_flag: false, segment: SME, observation_date: '2026-06-30', predicted_value: 180000, actual_value: 175000, exposure_weight: 1, outcome_flag: true, release_amount: 0, model_owner: SYNTHETIC_MODEL_OWNER, validation_status: VALIDATED, approval_id: SYNTH-MODEL-APPROVAL}
+  - {observation_id: S-BT-STG-01, model_type: STAGING, model_version_id: SYNTH_STAGING_V1, challenger_flag: false, segment: ALL, observation_date: '2026-06-30', predicted_value: 0.75, actual_value: 1.0, exposure_weight: 1, outcome_flag: true, release_amount: 0, model_owner: CREDIT_RISK_OWNER, validation_status: VALIDATED, approval_id: SYNTH-STAGING-APPROVAL}
+  - {observation_id: S-BT-STG-02, model_type: STAGING, model_version_id: SYNTH_STAGING_V1, challenger_flag: false, segment: ALL, observation_date: '2026-06-30', predicted_value: 0.08, actual_value: 0.0, exposure_weight: 9, outcome_flag: false, release_amount: 0, model_owner: CREDIT_RISK_OWNER, validation_status: VALIDATED, approval_id: SYNTH-STAGING-APPROVAL}

@@ -1,0 +1,6 @@
+financial-instruments-accounting
+Copyright 2026 RiskDataScience GmbH
+Derived from the company-owned financial-instruments-accounting-engine 1.2.0.
+Modifications: standalone library API, validation, resources, accounting corrections and documentation.
+Own code, documentation and synthetic reference data are licensed under Apache-2.0.
+IFRS Foundation/IASB are not affiliated with this product.

@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "numeric_conventions": {
+    "rates": "decimal",
+    "time": "years",
+    "money": "single unspecified currency per case",
+    "probability_abs_tolerance": "0.000000000001",
+    "money_abs_tolerance": "0.00000001"
+  },
+  "cases": [
+    {
+      "id": "G-EIR-001",
+      "function": "effective_interest_rate",
+      "inputs": {"initial_net": "1000", "cashflows": [["1", "1100"]]},
+      "expected": "0.10",
+      "derivation": "1100 / 1.10 = 1000"
+    },
+    {
+      "id": "G-ECL-001",
+      "function": "component_ecl",
+      "inputs": {"marginal_pd": "0.02", "ead": "100000", "lgd": "0.40", "eir": "0.05", "year": "1"},
+      "expected": "761.9047619047619047619047619",
+      "derivation": "0.02 * 100000 * 0.40 / 1.05"
+    },
+    {
+      "id": "G-PD-001",
+      "function": "cumulative_pd_from_conditional",
+      "inputs": {"conditional": ["0.10", "0.20"]},
+      "expected": ["0.10", "0.28"],
+      "derivation": "1-(1-0.10)*(1-0.20) = 0.28"
+    },
+    {
+      "id": "G-LGD-001",
+      "function": "lgd_from_recoveries",
+      "inputs": {"ead": "100", "recoveries": [["1", "55"]], "eir": "0.10", "costs": []},
+      "expected": "0.50",
+      "derivation": "(100 - 55/1.10) / 100"
+    },
+    {
+      "id": "G-WEIGHT-001",
+      "function": "weighted_ecl",
+      "inputs": {"scenario_losses": {"base": "10", "stress": "30"}, "probabilities": {"base": "0.75", "stress": "0.25"}},
+      "expected": "15",
+      "derivation": "10*0.75 + 30*0.25"
+    },
+    {
+      "id": "G-POCI-001",
+      "function": "poci_allowance_change",
+      "inputs": {"current_lifetime_ecl": "20", "initial_lifetime_ecl": "30"},
+      "expected": "-10",
+      "derivation": "20 - 30; favourable change remains signed"
+    },
+    {
+      "id": "G-HEDGE-001",
+      "function": "measure_hedge",
+      "inputs": {"hedging_change": "120", "hedged_change": "-100"},
+      "expected": {"oci_effective": "100", "ineffectiveness_pnl": "20"},
+      "derivation": "lower-of absolute changes = 100; residual gain = 20"
+    },
+    {
+      "id": "G-MOD-001",
+      "function": "liability_modification_test",
+      "inputs": {"original_present_value": "100", "modified_present_value": "110", "threshold": "0.10"},
+      "expected": {"ratio": "0.10", "substantial": true},
+      "derivation": "abs(110-100)/100 = 0.10; equality qualifies"
+    }
+  ]
+}

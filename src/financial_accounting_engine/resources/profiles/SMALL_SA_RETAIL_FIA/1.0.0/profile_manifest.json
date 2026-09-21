@@ -1,0 +1,117 @@
+{
+  "configuration_hashes": {
+    "code/financial_instruments_engine/synthetic.py": "7c6f86d251350219f47f79ef5c8c847c473abb45b14e0dceff44eae39888fbfd",
+    "daten/konfiguration/accounting/eu_financial_instruments_2026_v1.yaml": "586d704d21914cb42bbe74a895e81ac36140510f9692b57892bfcdf40829cd08",
+    "daten/konfiguration/profiles/SMALL_SA_RETAIL_FIA.yaml": "a95e2a2db2efd62215a63856d64280a29ea7e8f22bebf15b1793974dd73a97ae",
+    "daten/konfiguration/rules/financial_instruments_rules_2026_v1.yaml": "7c22faf3266242dade96515de76c8127fba47aac6c65b2c1c2c683fe73965f4c"
+  },
+  "contract_version": "1.1.0",
+  "created_at": "2026-09-03T08:06:44.452362+00:00",
+  "files": {
+    "FIA_IN_00_Run_Control.xlsx": {
+      "sha256": "c2bf3d38802c14aa94ced3a500493cc166274a5c2401ec4e3f84bd2b72c5d84a",
+      "size": 9972
+    },
+    "FIA_IN_01_Entities_Scopes.xlsx": {
+      "sha256": "df9f8f78e34aee2c961b226351915501519c2fe93b831d8b8e8d2468557d002e",
+      "size": 9665
+    },
+    "FIA_IN_02_Parties_Credit_Status.xlsx": {
+      "sha256": "d24a725a354d6d530052654cbf2543cbb293f10c2bd319db2524bfdc39f1459c",
+      "size": 10075
+    },
+    "FIA_IN_03_Instruments_Contracts.xlsx": {
+      "sha256": "e624fc442f89f03939b3f1c72969b3a2851825e674af7b3a67b6e0620f92afb1",
+      "size": 15324
+    },
+    "FIA_IN_04_Cashflows_Fees_EIR.xlsx": {
+      "sha256": "edd221e68b44058a6c9f62ae8ae28d8a4e7a8d0e6736326dc0f8d98dace308a6",
+      "size": 10267
+    },
+    "FIA_IN_05_Accounting_Balances.xlsx": {
+      "sha256": "1505d19f55e6c4c4b504b4259c81e7e9f7eb758ef054b804ea8077ad957cf99c",
+      "size": 10183
+    },
+    "FIA_IN_06_Classification_SPPI.xlsx": {
+      "sha256": "986163fd5fb8b9240f3f9a5fa7d09a701fcf0775202b440a9239ec2ef40b0af0",
+      "size": 11172
+    },
+    "FIA_IN_07_Collateral_Recoveries.xlsx": {
+      "sha256": "50d26456ed036346eceb0ecfc1c1de2973ebb5aaf48870382bdbe227bb319617",
+      "size": 10022
+    },
+    "FIA_IN_08_Staging_SICR.xlsx": {
+      "sha256": "5dea22a1fb139d0520f1c8bd1c997d6b480de2083507eba6c12e3801a9ca3aa1",
+      "size": 11634
+    },
+    "FIA_IN_09_PD_Models_Curves.xlsx": {
+      "sha256": "19cf0afe7c3ba51b878a1e8b9943e53c4c458f73c4032f8203581c0ea9d54c95",
+      "size": 16564
+    },
+    "FIA_IN_10_LGD_Models.xlsx": {
+      "sha256": "4ac98951d613a1e97ccfacde665f05b5a0f48a7030a6bf541e994c0cb9772934",
+      "size": 17368
+    },
+    "FIA_IN_11_EAD_CCF_Profiles.xlsx": {
+      "sha256": "a3169acf0d0e5fed6d21fdac80e1526d98ddd6932891caf66e626f02aaa59816",
+      "size": 16766
+    },
+    "FIA_IN_12_Macro_Scenarios.xlsx": {
+      "sha256": "5d852797ff01a2cbfbd74c43ee52439f91c63909c9675b2a101b941185e30d22",
+      "size": 10091
+    },
+    "FIA_IN_13_Modifications_Writeoffs.xlsx": {
+      "sha256": "7123e3ff9367c5206b5d94ff486219fc794bf01ed2e1acc4a908bf0bd903b459",
+      "size": 10449
+    },
+    "FIA_IN_14_Fair_Value_Market_Data.xlsx": {
+      "sha256": "98d43cfea1984b510d03c4ad5363925a5eeacf59a3222571af91ffba953f828a",
+      "size": 10613
+    },
+    "FIA_IN_15_Hedge_Accounting.xlsx": {
+      "sha256": "0c381826d4fe5f23c5d6f3cafbd318ec6ab1e505b798dffe722a1af47018a692",
+      "size": 11113
+    },
+    "FIA_IN_16_Rules_Parameters.xlsx": {
+      "sha256": "6c25027e70e4fea0d0ecd2ef8da8d6412de65d652d3a49a484c5ac3b5798b7ce",
+      "size": 10899
+    },
+    "FIA_IN_17_Bank_Mappings.xlsx": {
+      "sha256": "c546b88392310296941b813bb6d55fa500a07ecf49fe8263a6e4806fd4e05e32",
+      "size": 9439
+    },
+    "FIA_IN_18_Backtesting_Observations.xlsx": {
+      "sha256": "6e057fa666a9712b3ed9d61fac4bd3b45c41c9b66982b11306f64913f6d50ac3",
+      "size": 11087
+    }
+  },
+  "manifest_version": "1.1",
+  "profile_id": "SMALL_SA_RETAIL_FIA",
+  "profile_version": "1.0.0",
+  "seed": 9022027,
+  "status": "GENERATED",
+  "table_row_counts": {
+    "backtesting": 6,
+    "cashflows": 4,
+    "classification_inputs": 5,
+    "collateral": 1,
+    "ead_profiles": 75,
+    "entities": 1,
+    "events": 0,
+    "hedges": 0,
+    "instruments": 5,
+    "lgd_profiles": 75,
+    "mappings": 0,
+    "market_data": 5,
+    "opening_balances": 5,
+    "parameters": 12,
+    "parties": 5,
+    "pd_curves": 75,
+    "run_control": 1,
+    "scenarios": 3,
+    "staging_inputs": 5
+  },
+  "total_input_rows": 283,
+  "warning": "Synthetic data only; no institution-specific approval.",
+  "workbook_count": 19
+}

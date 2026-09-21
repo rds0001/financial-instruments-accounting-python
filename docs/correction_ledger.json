@@ -1,0 +1,2229 @@
+[
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "00_Summary/SUMMARY",
+    "key": "closing_allowance",
+    "field": "value",
+    "before": {
+      "decimal": "347972.0342412043"
+    },
+    "after": {
+      "decimal": "347727.1317328072"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "00_Summary/SUMMARY",
+    "key": "final_ecl_before_writeoff",
+    "field": "value",
+    "before": {
+      "decimal": "372972.0342412043"
+    },
+    "after": {
+      "decimal": "372727.1317328072"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "00_Summary/SUMMARY",
+    "key": "net_carrying_amount",
+    "field": "value",
+    "before": {
+      "decimal": "4509027.965758796"
+    },
+    "after": {
+      "decimal": "4509272.8682671925"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "00_Summary/CONTROLS",
+    "key": "ALLOWANCE_ROLLFORWARD",
+    "field": "actual",
+    "before": {
+      "decimal": "347972.0342412043"
+    },
+    "after": {
+      "decimal": "347727.1317328072"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "00_Summary/CONTROLS",
+    "key": "ALLOWANCE_ROLLFORWARD",
+    "field": "expected",
+    "before": {
+      "decimal": "347972.0342412043"
+    },
+    "after": {
+      "decimal": "347727.1317328072"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "00_Summary/CONTROLS",
+    "key": "ECL_SCENARIO_RECONCILIATION",
+    "field": "actual",
+    "before": {
+      "decimal": "372972.0342412043"
+    },
+    "after": {
+      "decimal": "372727.1317328072"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "00_Summary/CONTROLS",
+    "key": "ECL_SCENARIO_RECONCILIATION",
+    "field": "expected",
+    "before": {
+      "decimal": "372972.0342412043"
+    },
+    "after": {
+      "decimal": "372727.1317328072"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "00_Summary/CONTROLS",
+    "key": "GROSS_NET_CARRYING_AMOUNT",
+    "field": "actual",
+    "before": {
+      "decimal": "4509027.965758796"
+    },
+    "after": {
+      "decimal": "4509272.8682671925"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "00_Summary/CONTROLS",
+    "key": "GROSS_NET_CARRYING_AMOUNT",
+    "field": "expected",
+    "before": {
+      "decimal": "4509027.965758796"
+    },
+    "after": {
+      "decimal": "4509272.8682671925"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "01_Classification/DERECOGNITION",
+    "key": "EVT-WO-SME",
+    "field": "pnl_effect",
+    "before": -25000,
+    "after": {
+      "decimal": "0.0"
+    },
+    "reason": "WRITEOFF_ALLOWANCE_UTILISATION_NO_DUPLICATE_EXPENSE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "02_Measurement_EIR/INTEREST_REVENUE",
+    "key": "U_POCI_09",
+    "field": "interest_basis",
+    "before": 80000,
+    "after": {
+      "decimal": "66553.34900665135"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "02_Measurement_EIR/INTEREST_REVENUE",
+    "key": "U_POCI_09",
+    "field": "interest_revenue",
+    "before": 6000,
+    "after": {
+      "decimal": "4991.501175498851"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "02_Measurement_EIR/MODIFICATIONS",
+    "key": "EVT-WO-SME",
+    "field": "pnl_effect",
+    "before": -25000,
+    "after": {
+      "decimal": "0.0"
+    },
+    "reason": "WRITEOFF_ALLOWANCE_UTILISATION_NO_DUPLICATE_EXPENSE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_RESULTS",
+    "key": "U_POCI_09",
+    "field": "final_ecl",
+    "before": {
+      "decimal": "13691.55350174575"
+    },
+    "after": {
+      "decimal": "13446.650993348649"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_RESULTS",
+    "key": "U_POCI_09",
+    "field": "final_ecl_local",
+    "before": {
+      "decimal": "13691.55350174575"
+    },
+    "after": {
+      "decimal": "13446.650993348649"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_RESULTS",
+    "key": "U_POCI_09",
+    "field": "weighted_ecl",
+    "before": {
+      "decimal": "28691.55350174575"
+    },
+    "after": {
+      "decimal": "28446.65099334865"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_RESULTS",
+    "key": "U_POCI_09",
+    "field": "weighted_ecl_local",
+    "before": {
+      "decimal": "28691.55350174575"
+    },
+    "after": {
+      "decimal": "28446.65099334865"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_RESULTS",
+    "key": "U_SME_04",
+    "field": "poci_initial_lifetime_ecl",
+    "before": null,
+    "after": {
+      "decimal": "0.0"
+    },
+    "reason": "EXPLICIT_ZERO_NONAPPLICABLE_MOVEMENT"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'BASE', 1)",
+    "field": "discounted_ecl",
+    "before": {
+      "decimal": "12142.05607476636"
+    },
+    "after": {
+      "decimal": "12085.58139534884"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'BASE', 1)",
+    "field": "discounted_ecl_local",
+    "before": {
+      "decimal": "12142.05607476636"
+    },
+    "after": {
+      "decimal": "12085.58139534884"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'BASE', 2)",
+    "field": "discounted_ecl",
+    "before": {
+      "decimal": "7503.654481614113"
+    },
+    "after": {
+      "decimal": "7434.015373499188"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'BASE', 2)",
+    "field": "discounted_ecl_local",
+    "before": {
+      "decimal": "7503.654481614113"
+    },
+    "after": {
+      "decimal": "7434.015373499188"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'BASE', 3)",
+    "field": "discounted_ecl",
+    "before": {
+      "decimal": "4159.451926707551"
+    },
+    "after": {
+      "decimal": "4101.682592294696"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'BASE', 3)",
+    "field": "discounted_ecl_local",
+    "before": {
+      "decimal": "4159.451926707551"
+    },
+    "after": {
+      "decimal": "4101.682592294696"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'BASE', 4)",
+    "field": "discounted_ecl",
+    "before": {
+      "decimal": "2000.449342670492"
+    },
+    "after": {
+      "decimal": "1963.490534384361"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'BASE', 4)",
+    "field": "discounted_ecl_local",
+    "before": {
+      "decimal": "2000.449342670492"
+    },
+    "after": {
+      "decimal": "1963.490534384361"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'BASE', 5)",
+    "field": "discounted_ecl",
+    "before": {
+      "decimal": "766.8275983990875"
+    },
+    "after": {
+      "decimal": "749.1595188787635"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'BASE', 5)",
+    "field": "discounted_ecl_local",
+    "before": {
+      "decimal": "766.8275983990875"
+    },
+    "after": {
+      "decimal": "749.1595188787635"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'DOWNSIDE', 1)",
+    "field": "discounted_ecl",
+    "before": {
+      "decimal": "24041.27102803738"
+    },
+    "after": {
+      "decimal": "23929.451162790698"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'DOWNSIDE', 1)",
+    "field": "discounted_ecl_local",
+    "before": {
+      "decimal": "24041.27102803738"
+    },
+    "after": {
+      "decimal": "23929.451162790698"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'DOWNSIDE', 2)",
+    "field": "discounted_ecl",
+    "before": {
+      "decimal": "11101.65680554809"
+    },
+    "after": {
+      "decimal": "10998.625745092055"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'DOWNSIDE', 2)",
+    "field": "discounted_ecl_local",
+    "before": {
+      "decimal": "11101.65680554809"
+    },
+    "after": {
+      "decimal": "10998.625745092055"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'DOWNSIDE', 3)",
+    "field": "discounted_ecl",
+    "before": {
+      "decimal": "4326.384597366082"
+    },
+    "after": {
+      "decimal": "4266.296786998791"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'DOWNSIDE', 3)",
+    "field": "discounted_ecl_local",
+    "before": {
+      "decimal": "4326.384597366082"
+    },
+    "after": {
+      "decimal": "4266.296786998791"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'DOWNSIDE', 4)",
+    "field": "discounted_ecl",
+    "before": {
+      "decimal": "1361.401845017631"
+    },
+    "after": {
+      "decimal": "1336.2496011106577"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'DOWNSIDE', 4)",
+    "field": "discounted_ecl_local",
+    "before": {
+      "decimal": "1361.401845017631"
+    },
+    "after": {
+      "decimal": "1336.2496011106577"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'DOWNSIDE', 5)",
+    "field": "discounted_ecl",
+    "before": {
+      "decimal": "313.2526519082239"
+    },
+    "after": {
+      "decimal": "306.0351589861884"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'DOWNSIDE', 5)",
+    "field": "discounted_ecl_local",
+    "before": {
+      "decimal": "313.2526519082239"
+    },
+    "after": {
+      "decimal": "306.0351589861884"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'UPSIDE', 1)",
+    "field": "discounted_ecl",
+    "before": {
+      "decimal": "7649.495327102803"
+    },
+    "after": {
+      "decimal": "7613.916279069767"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'UPSIDE', 1)",
+    "field": "discounted_ecl_local",
+    "before": {
+      "decimal": "7649.495327102803"
+    },
+    "after": {
+      "decimal": "7613.916279069767"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'UPSIDE', 2)",
+    "field": "discounted_ecl",
+    "before": {
+      "decimal": "5278.82092781553"
+    },
+    "after": {
+      "decimal": "5229.82981525668"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'UPSIDE', 2)",
+    "field": "discounted_ecl_local",
+    "before": {
+      "decimal": "5278.82092781553"
+    },
+    "after": {
+      "decimal": "5229.82981525668"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'UPSIDE', 3)",
+    "field": "discounted_ecl",
+    "before": {
+      "decimal": "3327.244492233167"
+    },
+    "after": {
+      "decimal": "3281.0334280997013"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'UPSIDE', 3)",
+    "field": "discounted_ecl_local",
+    "before": {
+      "decimal": "3327.244492233167"
+    },
+    "after": {
+      "decimal": "3281.0334280997013"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'UPSIDE', 4)",
+    "field": "discounted_ecl",
+    "before": {
+      "decimal": "1855.534137433599"
+    },
+    "after": {
+      "decimal": "1821.2526742688128"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'UPSIDE', 4)",
+    "field": "discounted_ecl_local",
+    "before": {
+      "decimal": "1855.534137433599"
+    },
+    "after": {
+      "decimal": "1821.2526742688128"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'UPSIDE', 5)",
+    "field": "discounted_ecl",
+    "before": {
+      "decimal": "842.5055478635138"
+    },
+    "after": {
+      "decimal": "823.0938117092032"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "03_Impairment_ECL/ECL_COMPONENTS",
+    "key": "('U_POCI_09', 'UPSIDE', 5)",
+    "field": "discounted_ecl_local",
+    "before": {
+      "decimal": "842.5055478635138"
+    },
+    "after": {
+      "decimal": "823.0938117092032"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "04_Hedge_Accounting/OCI_ROLLFORWARD",
+    "key": "HEDGE_RESERVE",
+    "field": "basis_adjustment",
+    "before": null,
+    "after": {
+      "decimal": "0.0"
+    },
+    "reason": "EXPLICIT_ZERO_NONAPPLICABLE_MOVEMENT"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('ECL-U_POCI_09', 'ECL_EXPENSE')",
+    "field": "debit",
+    "before": {
+      "decimal": "13691.55350174575"
+    },
+    "after": {
+      "decimal": "13446.650993348649"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('ECL-U_POCI_09', 'LOSS_ALLOWANCE')",
+    "field": "credit",
+    "before": {
+      "decimal": "13691.55350174575"
+    },
+    "after": {
+      "decimal": "13446.650993348649"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('EVT-EVT-LIAB-MOD', 'FINANCIAL_INSTRUMENT_CARRYING_AMOUNT')",
+    "field": "credit",
+    "before": 0,
+    "after": {
+      "decimal": "35000.0"
+    },
+    "reason": "MODIFICATION_GAIN_LOSS_JOURNAL_SIGN"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('EVT-EVT-LIAB-MOD', 'FINANCIAL_INSTRUMENT_CARRYING_AMOUNT')",
+    "field": "debit",
+    "before": 35000,
+    "after": 0,
+    "reason": "MODIFICATION_GAIN_LOSS_JOURNAL_SIGN"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('EVT-EVT-LIAB-MOD', 'MODIFICATION_OR_DERECOGNITION_PNL')",
+    "field": "credit",
+    "before": 35000,
+    "after": 0,
+    "reason": "MODIFICATION_GAIN_LOSS_JOURNAL_SIGN"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('EVT-EVT-LIAB-MOD', 'MODIFICATION_OR_DERECOGNITION_PNL')",
+    "field": "debit",
+    "before": 0,
+    "after": {
+      "decimal": "35000.0"
+    },
+    "reason": "MODIFICATION_GAIN_LOSS_JOURNAL_SIGN"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-COH', 'COST_OF_HEDGING_OCI')",
+    "field": "credit",
+    "before": 0,
+    "after": {
+      "decimal": "160.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-COH', 'COST_OF_HEDGING_OCI')",
+    "field": "debit",
+    "before": 160,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-COH', 'HEDGE_VALUATION_OFFSET')",
+    "field": "credit",
+    "before": 160,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-COH', 'HEDGE_VALUATION_OFFSET')",
+    "field": "debit",
+    "before": 0,
+    "after": {
+      "decimal": "160.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-INEFF', 'HEDGE_INEFFECTIVENESS_PNL')",
+    "field": "credit",
+    "before": 0,
+    "after": {
+      "decimal": "200.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-INEFF', 'HEDGE_INEFFECTIVENESS_PNL')",
+    "field": "debit",
+    "before": 200,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-INEFF', 'HEDGE_VALUATION_OFFSET')",
+    "field": "credit",
+    "before": 200,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-INEFF', 'HEDGE_VALUATION_OFFSET')",
+    "field": "debit",
+    "before": 0,
+    "after": {
+      "decimal": "200.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-OCI', 'HEDGE_RESERVE_OCI')",
+    "field": "credit",
+    "before": 0,
+    "after": {
+      "decimal": "6000.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-OCI', 'HEDGE_RESERVE_OCI')",
+    "field": "debit",
+    "before": 6000,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-OCI', 'HEDGE_VALUATION_OFFSET')",
+    "field": "credit",
+    "before": 6000,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-OCI', 'HEDGE_VALUATION_OFFSET')",
+    "field": "debit",
+    "before": 0,
+    "after": {
+      "decimal": "6000.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "account",
+    "before": null,
+    "after": "HEDGE_RECYCLING_PNL",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "accounting_policy_id",
+    "before": null,
+    "after": "EU_FINANCIAL_INSTRUMENTS_2026_V1",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "as_of_date",
+    "before": null,
+    "after": "2026-12-31",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "credit",
+    "before": null,
+    "after": {
+      "decimal": "500.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "debit",
+    "before": null,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "formula_id",
+    "before": null,
+    "after": "ACCOUNTING-RULE",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "instrument_id",
+    "before": null,
+    "after": "H_CF_02",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "journal_batch_id",
+    "before": null,
+    "after": "HDG-H_CF_02-RECYCLE",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "knowledge_time",
+    "before": null,
+    "after": "2026-09-02T12:00:00+02:00",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "movement_type",
+    "before": null,
+    "after": "HEDGE_ACCOUNTING",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "official_flag",
+    "before": null,
+    "after": false,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "result_version",
+    "before": null,
+    "after": "1",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "rule_set_id",
+    "before": null,
+    "after": "FIA_RULES_2026_V1",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "source_object_id",
+    "before": null,
+    "after": "H_CF_02",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "view",
+    "before": null,
+    "after": "REFERENCE",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "account",
+    "before": null,
+    "after": "HEDGE_RESERVE_OCI",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "accounting_policy_id",
+    "before": null,
+    "after": "EU_FINANCIAL_INSTRUMENTS_2026_V1",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "as_of_date",
+    "before": null,
+    "after": "2026-12-31",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "credit",
+    "before": null,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "debit",
+    "before": null,
+    "after": {
+      "decimal": "500.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "formula_id",
+    "before": null,
+    "after": "ACCOUNTING-RULE",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "instrument_id",
+    "before": null,
+    "after": "H_CF_02",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "journal_batch_id",
+    "before": null,
+    "after": "HDG-H_CF_02-RECYCLE",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "knowledge_time",
+    "before": null,
+    "after": "2026-09-02T12:00:00+02:00",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "movement_type",
+    "before": null,
+    "after": "HEDGE_ACCOUNTING",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "official_flag",
+    "before": null,
+    "after": false,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "result_version",
+    "before": null,
+    "after": "1",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "rule_set_id",
+    "before": null,
+    "after": "FIA_RULES_2026_V1",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "source_object_id",
+    "before": null,
+    "after": "H_CF_02",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_CF_02-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "view",
+    "before": null,
+    "after": "REFERENCE",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-INEFF', 'HEDGE_INEFFECTIVENESS_PNL')",
+    "field": "credit",
+    "before": 0,
+    "after": {
+      "decimal": "100.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-INEFF', 'HEDGE_INEFFECTIVENESS_PNL')",
+    "field": "debit",
+    "before": 100,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-INEFF', 'HEDGE_VALUATION_OFFSET')",
+    "field": "credit",
+    "before": 100,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-INEFF', 'HEDGE_VALUATION_OFFSET')",
+    "field": "debit",
+    "before": 0,
+    "after": {
+      "decimal": "100.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-OCI', 'HEDGE_RESERVE_OCI')",
+    "field": "credit",
+    "before": 0,
+    "after": {
+      "decimal": "1400.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-OCI', 'HEDGE_RESERVE_OCI')",
+    "field": "debit",
+    "before": 1400,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-OCI', 'HEDGE_VALUATION_OFFSET')",
+    "field": "credit",
+    "before": 1400,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-OCI', 'HEDGE_VALUATION_OFFSET')",
+    "field": "debit",
+    "before": 0,
+    "after": {
+      "decimal": "1400.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "account",
+    "before": null,
+    "after": "HEDGE_RECYCLING_PNL",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "accounting_policy_id",
+    "before": null,
+    "after": "EU_FINANCIAL_INSTRUMENTS_2026_V1",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "as_of_date",
+    "before": null,
+    "after": "2026-12-31",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "credit",
+    "before": null,
+    "after": {
+      "decimal": "1400.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "debit",
+    "before": null,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "formula_id",
+    "before": null,
+    "after": "ACCOUNTING-RULE",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "instrument_id",
+    "before": null,
+    "after": "H_DISC_05",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "journal_batch_id",
+    "before": null,
+    "after": "HDG-H_DISC_05-RECYCLE",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "knowledge_time",
+    "before": null,
+    "after": "2026-09-02T12:00:00+02:00",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "movement_type",
+    "before": null,
+    "after": "HEDGE_ACCOUNTING",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "official_flag",
+    "before": null,
+    "after": false,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "result_version",
+    "before": null,
+    "after": "1",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "rule_set_id",
+    "before": null,
+    "after": "FIA_RULES_2026_V1",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "source_object_id",
+    "before": null,
+    "after": "H_DISC_05",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RECYCLING_PNL')",
+    "field": "view",
+    "before": null,
+    "after": "REFERENCE",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "account",
+    "before": null,
+    "after": "HEDGE_RESERVE_OCI",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "accounting_policy_id",
+    "before": null,
+    "after": "EU_FINANCIAL_INSTRUMENTS_2026_V1",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "as_of_date",
+    "before": null,
+    "after": "2026-12-31",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "credit",
+    "before": null,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "debit",
+    "before": null,
+    "after": {
+      "decimal": "1400.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "formula_id",
+    "before": null,
+    "after": "ACCOUNTING-RULE",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "instrument_id",
+    "before": null,
+    "after": "H_DISC_05",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "journal_batch_id",
+    "before": null,
+    "after": "HDG-H_DISC_05-RECYCLE",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "knowledge_time",
+    "before": null,
+    "after": "2026-09-02T12:00:00+02:00",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "movement_type",
+    "before": null,
+    "after": "HEDGE_ACCOUNTING",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "official_flag",
+    "before": null,
+    "after": false,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "result_version",
+    "before": null,
+    "after": "1",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "rule_set_id",
+    "before": null,
+    "after": "FIA_RULES_2026_V1",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "source_object_id",
+    "before": null,
+    "after": "H_DISC_05",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_DISC_05-RECYCLE', 'HEDGE_RESERVE_OCI')",
+    "field": "view",
+    "before": null,
+    "after": "REFERENCE",
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_FV_01-INEFF', 'HEDGE_INEFFECTIVENESS_PNL')",
+    "field": "credit",
+    "before": 0,
+    "after": {
+      "decimal": "400.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_FV_01-INEFF', 'HEDGE_INEFFECTIVENESS_PNL')",
+    "field": "debit",
+    "before": 400,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_FV_01-INEFF', 'HEDGE_VALUATION_OFFSET')",
+    "field": "credit",
+    "before": 400,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_FV_01-INEFF', 'HEDGE_VALUATION_OFFSET')",
+    "field": "debit",
+    "before": 0,
+    "after": {
+      "decimal": "400.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_NI_03-INEFF', 'HEDGE_INEFFECTIVENESS_PNL')",
+    "field": "credit",
+    "before": 0,
+    "after": {
+      "decimal": "100.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_NI_03-INEFF', 'HEDGE_INEFFECTIVENESS_PNL')",
+    "field": "debit",
+    "before": 100,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_NI_03-INEFF', 'HEDGE_VALUATION_OFFSET')",
+    "field": "credit",
+    "before": 100,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_NI_03-INEFF', 'HEDGE_VALUATION_OFFSET')",
+    "field": "debit",
+    "before": 0,
+    "after": {
+      "decimal": "100.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_NI_03-OCI', 'HEDGE_RESERVE_OCI')",
+    "field": "credit",
+    "before": 0,
+    "after": {
+      "decimal": "4000.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_NI_03-OCI', 'HEDGE_RESERVE_OCI')",
+    "field": "debit",
+    "before": 4000,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_NI_03-OCI', 'HEDGE_VALUATION_OFFSET')",
+    "field": "credit",
+    "before": 4000,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_NI_03-OCI', 'HEDGE_VALUATION_OFFSET')",
+    "field": "debit",
+    "before": 0,
+    "after": {
+      "decimal": "4000.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_PPA_06-INEFF', 'HEDGE_INEFFECTIVENESS_PNL')",
+    "field": "credit",
+    "before": 0,
+    "after": {
+      "decimal": "50.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_PPA_06-INEFF', 'HEDGE_INEFFECTIVENESS_PNL')",
+    "field": "debit",
+    "before": 50,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_PPA_06-INEFF', 'HEDGE_VALUATION_OFFSET')",
+    "field": "credit",
+    "before": 50,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_PPA_06-INEFF', 'HEDGE_VALUATION_OFFSET')",
+    "field": "debit",
+    "before": 0,
+    "after": {
+      "decimal": "50.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_PPA_06-OCI', 'HEDGE_RESERVE_OCI')",
+    "field": "credit",
+    "before": 0,
+    "after": {
+      "decimal": "2050.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_PPA_06-OCI', 'HEDGE_RESERVE_OCI')",
+    "field": "debit",
+    "before": 2050,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_PPA_06-OCI', 'HEDGE_VALUATION_OFFSET')",
+    "field": "credit",
+    "before": 2050,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_PPA_06-OCI', 'HEDGE_VALUATION_OFFSET')",
+    "field": "debit",
+    "before": 0,
+    "after": {
+      "decimal": "2050.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_REBAL_04-INEFF', 'HEDGE_INEFFECTIVENESS_PNL')",
+    "field": "credit",
+    "before": 0,
+    "after": {
+      "decimal": "300.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_REBAL_04-INEFF', 'HEDGE_INEFFECTIVENESS_PNL')",
+    "field": "debit",
+    "before": 300,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_REBAL_04-INEFF', 'HEDGE_VALUATION_OFFSET')",
+    "field": "credit",
+    "before": 300,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_REBAL_04-INEFF', 'HEDGE_VALUATION_OFFSET')",
+    "field": "debit",
+    "before": 0,
+    "after": {
+      "decimal": "300.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_REBAL_04-OCI', 'HEDGE_RESERVE_OCI')",
+    "field": "credit",
+    "before": 0,
+    "after": {
+      "decimal": "2700.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_REBAL_04-OCI', 'HEDGE_RESERVE_OCI')",
+    "field": "debit",
+    "before": 2700,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_REBAL_04-OCI', 'HEDGE_VALUATION_OFFSET')",
+    "field": "credit",
+    "before": 2700,
+    "after": 0,
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/JOURNALS",
+    "key": "('HDG-H_REBAL_04-OCI', 'HEDGE_VALUATION_OFFSET')",
+    "field": "debit",
+    "before": 0,
+    "after": {
+      "decimal": "2700.0"
+    },
+    "reason": "HEDGE_GAIN_CREDIT_AND_RESERVE_RELEASE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/ALLOWANCE_ROLLFORWARD",
+    "key": "U_POCI_09",
+    "field": "closing_allowance",
+    "before": {
+      "decimal": "13691.55350174575"
+    },
+    "after": {
+      "decimal": "13446.650993348649"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/ALLOWANCE_ROLLFORWARD",
+    "key": "U_POCI_09",
+    "field": "ecl_remeasurement",
+    "before": {
+      "decimal": "13691.55350174575"
+    },
+    "after": {
+      "decimal": "13446.650993348649"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/OCI_ROLLFORWARD",
+    "key": "HEDGE_RESERVE",
+    "field": "basis_adjustment",
+    "before": null,
+    "after": {
+      "decimal": "0.0"
+    },
+    "reason": "EXPLICIT_ZERO_NONAPPLICABLE_MOVEMENT"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/DISCLOSURE_FACTS",
+    "key": "U_POCI_09",
+    "field": "allowance",
+    "before": {
+      "decimal": "13691.55350174575"
+    },
+    "after": {
+      "decimal": "13446.650993348649"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/DISCLOSURE_FACTS",
+    "key": "U_POCI_09",
+    "field": "net_carrying_amount",
+    "before": {
+      "decimal": "66308.44649825426"
+    },
+    "after": {
+      "decimal": "66553.34900665135"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/DISCLOSURE_AGGREGATES",
+    "key": "('classification', 'AMORTISED_COST')",
+    "field": "allowance",
+    "before": {
+      "decimal": "370780.7488376573"
+    },
+    "after": {
+      "decimal": "370535.84632926015"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/DISCLOSURE_AGGREGATES",
+    "key": "('classification', 'AMORTISED_COST')",
+    "field": "coverage_ratio",
+    "before": {
+      "decimal": "0.1331827402434114"
+    },
+    "after": {
+      "decimal": "0.1330947723883837"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/DISCLOSURE_AGGREGATES",
+    "key": "('classification', 'AMORTISED_COST')",
+    "field": "net_carrying_amount",
+    "before": {
+      "decimal": "2413219.251162343"
+    },
+    "after": {
+      "decimal": "2413464.15367074"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/DISCLOSURE_AGGREGATES",
+    "key": "('currency', 'EUR')",
+    "field": "allowance",
+    "before": {
+      "decimal": "372972.0342412043"
+    },
+    "after": {
+      "decimal": "372727.1317328072"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/DISCLOSURE_AGGREGATES",
+    "key": "('currency', 'EUR')",
+    "field": "coverage_ratio",
+    "before": {
+      "decimal": "0.05935264707848573"
+    },
+    "after": {
+      "decimal": "0.05931367468695213"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/DISCLOSURE_AGGREGATES",
+    "key": "('currency', 'EUR')",
+    "field": "net_carrying_amount",
+    "before": {
+      "decimal": "5911027.965758796"
+    },
+    "after": {
+      "decimal": "5911272.8682671925"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/DISCLOSURE_AGGREGATES",
+    "key": "('entity_id', 'ENTITY_SYNTH')",
+    "field": "allowance",
+    "before": {
+      "decimal": "372972.0342412043"
+    },
+    "after": {
+      "decimal": "372727.1317328072"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/DISCLOSURE_AGGREGATES",
+    "key": "('entity_id', 'ENTITY_SYNTH')",
+    "field": "coverage_ratio",
+    "before": {
+      "decimal": "0.05807723983824421"
+    },
+    "after": {
+      "decimal": "0.05803910491012258"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/DISCLOSURE_AGGREGATES",
+    "key": "('entity_id', 'ENTITY_SYNTH')",
+    "field": "net_carrying_amount",
+    "before": {
+      "decimal": "6049027.965758796"
+    },
+    "after": {
+      "decimal": "6049272.8682671925"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/DISCLOSURE_AGGREGATES",
+    "key": "('entity_id+portfolio+classification+stage+currency', 'ENTITY_SYNTH|POCI_LOAN|AMORTISED_COST|POCI|EUR')",
+    "field": "allowance",
+    "before": {
+      "decimal": "13691.55350174575"
+    },
+    "after": {
+      "decimal": "13446.650993348649"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/DISCLOSURE_AGGREGATES",
+    "key": "('entity_id+portfolio+classification+stage+currency', 'ENTITY_SYNTH|POCI_LOAN|AMORTISED_COST|POCI|EUR')",
+    "field": "coverage_ratio",
+    "before": {
+      "decimal": "0.1711444187718219"
+    },
+    "after": {
+      "decimal": "0.1680831374168581"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/DISCLOSURE_AGGREGATES",
+    "key": "('entity_id+portfolio+classification+stage+currency', 'ENTITY_SYNTH|POCI_LOAN|AMORTISED_COST|POCI|EUR')",
+    "field": "net_carrying_amount",
+    "before": {
+      "decimal": "66308.44649825426"
+    },
+    "after": {
+      "decimal": "66553.34900665135"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/DISCLOSURE_AGGREGATES",
+    "key": "('portfolio', 'POCI_LOAN')",
+    "field": "allowance",
+    "before": {
+      "decimal": "13691.55350174575"
+    },
+    "after": {
+      "decimal": "13446.650993348649"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/DISCLOSURE_AGGREGATES",
+    "key": "('portfolio', 'POCI_LOAN')",
+    "field": "coverage_ratio",
+    "before": {
+      "decimal": "0.1711444187718219"
+    },
+    "after": {
+      "decimal": "0.1680831374168581"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/DISCLOSURE_AGGREGATES",
+    "key": "('portfolio', 'POCI_LOAN')",
+    "field": "net_carrying_amount",
+    "before": {
+      "decimal": "66308.44649825426"
+    },
+    "after": {
+      "decimal": "66553.34900665135"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/DISCLOSURE_AGGREGATES",
+    "key": "('stage', 'POCI')",
+    "field": "allowance",
+    "before": {
+      "decimal": "13691.55350174575"
+    },
+    "after": {
+      "decimal": "13446.650993348649"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/DISCLOSURE_AGGREGATES",
+    "key": "('stage', 'POCI')",
+    "field": "coverage_ratio",
+    "before": {
+      "decimal": "0.1711444187718219"
+    },
+    "after": {
+      "decimal": "0.1680831374168581"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/DISCLOSURE_AGGREGATES",
+    "key": "('stage', 'POCI')",
+    "field": "net_carrying_amount",
+    "before": {
+      "decimal": "66308.44649825426"
+    },
+    "after": {
+      "decimal": "66553.34900665135"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "05_Journals_Disclosures/EVENTS",
+    "key": "EVT-WO-SME",
+    "field": "pnl_effect",
+    "before": -25000,
+    "after": {
+      "decimal": "0.0"
+    },
+    "reason": "WRITEOFF_ALLOWANCE_UTILISATION_NO_DUPLICATE_EXPENSE"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "06_Audit/CONTROLS",
+    "key": "ALLOWANCE_ROLLFORWARD",
+    "field": "actual",
+    "before": {
+      "decimal": "347972.0342412043"
+    },
+    "after": {
+      "decimal": "347727.1317328072"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "06_Audit/CONTROLS",
+    "key": "ALLOWANCE_ROLLFORWARD",
+    "field": "expected",
+    "before": {
+      "decimal": "347972.0342412043"
+    },
+    "after": {
+      "decimal": "347727.1317328072"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "06_Audit/CONTROLS",
+    "key": "ECL_SCENARIO_RECONCILIATION",
+    "field": "actual",
+    "before": {
+      "decimal": "372972.0342412043"
+    },
+    "after": {
+      "decimal": "372727.1317328072"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "06_Audit/CONTROLS",
+    "key": "ECL_SCENARIO_RECONCILIATION",
+    "field": "expected",
+    "before": {
+      "decimal": "372972.0342412043"
+    },
+    "after": {
+      "decimal": "372727.1317328072"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "06_Audit/CONTROLS",
+    "key": "GROSS_NET_CARRYING_AMOUNT",
+    "field": "actual",
+    "before": {
+      "decimal": "4509027.965758796"
+    },
+    "after": {
+      "decimal": "4509272.8682671925"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "06_Audit/CONTROLS",
+    "key": "GROSS_NET_CARRYING_AMOUNT",
+    "field": "expected",
+    "before": {
+      "decimal": "4509027.965758796"
+    },
+    "after": {
+      "decimal": "4509272.8682671925"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "06_Audit/SCENARIO_SENSITIVITY",
+    "key": "BASE",
+    "field": "standalone_ecl",
+    "before": {
+      "decimal": "368897.2771699003"
+    },
+    "after": {
+      "decimal": "368658.7671601486"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "06_Audit/SCENARIO_SENSITIVITY",
+    "key": "BASE",
+    "field": "weighted_contribution",
+    "before": {
+      "decimal": "202893.5024434452"
+    },
+    "after": {
+      "decimal": "202762.32193808173"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "06_Audit/SCENARIO_SENSITIVITY",
+    "key": "DOWNSIDE",
+    "field": "standalone_ecl",
+    "before": {
+      "decimal": "477533.1497130867"
+    },
+    "after": {
+      "decimal": "477225.84124018764"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "06_Audit/SCENARIO_SENSITIVITY",
+    "key": "DOWNSIDE",
+    "field": "weighted_contribution",
+    "before": {
+      "decimal": "119383.2874282717"
+    },
+    "after": {
+      "decimal": "119306.46031004691"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "06_Audit/SCENARIO_SENSITIVITY",
+    "key": "UPSIDE",
+    "field": "standalone_ecl",
+    "before": {
+      "decimal": "303726.2218474376"
+    },
+    "after": {
+      "decimal": "303541.7474233931"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "06_Audit/SCENARIO_SENSITIVITY",
+    "key": "UPSIDE",
+    "field": "weighted_contribution",
+    "before": {
+      "decimal": "60745.24436948751"
+    },
+    "after": {
+      "decimal": "60708.34948467863"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "06_Audit/REGULATORY_BRIDGE",
+    "key": "U_POCI_09",
+    "field": "difference",
+    "before": {
+      "decimal": "13691.55350174575"
+    },
+    "after": {
+      "decimal": "13446.650993348649"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "MID_SIZE_UNIVERSAL_FIA",
+    "table": "06_Audit/REGULATORY_BRIDGE",
+    "key": "U_POCI_09",
+    "field": "ifrs9_ecl",
+    "before": {
+      "decimal": "13691.55350174575"
+    },
+    "after": {
+      "decimal": "13446.650993348649"
+    },
+    "reason": "POCI_CREDIT_ADJUSTED_RATE_AND_NET_INTEREST"
+  },
+  {
+    "profile": "SMALL_SA_RETAIL_FIA",
+    "table": "04_Hedge_Accounting/OCI_ROLLFORWARD",
+    "key": "HEDGE_RESERVE",
+    "field": "basis_adjustment",
+    "before": null,
+    "after": 0,
+    "reason": "EXPLICIT_ZERO_NONAPPLICABLE_MOVEMENT"
+  },
+  {
+    "profile": "SMALL_SA_RETAIL_FIA",
+    "table": "05_Journals_Disclosures/OCI_ROLLFORWARD",
+    "key": "HEDGE_RESERVE",
+    "field": "basis_adjustment",
+    "before": null,
+    "after": 0,
+    "reason": "EXPLICIT_ZERO_NONAPPLICABLE_MOVEMENT"
+  }
+]

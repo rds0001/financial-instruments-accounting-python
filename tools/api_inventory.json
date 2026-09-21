@@ -1,0 +1,5492 @@
+{
+  "status": "IMPLEMENTED",
+  "functions": [
+    {
+      "name": "aggregate_disclosures",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(facts: 'Table') -> 'list[Row]'",
+      "requirements": [
+        "FR-054"
+      ],
+      "documentation": "docs/api/aggregate_disclosures.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "aggregate_disclosures",
+      "tests": [
+        "tests/test_api.py::test_api_example[aggregate_disclosures]"
+      ],
+      "return_schema": {
+        "type": "table",
+        "fields": {
+          "aggregation_level": [
+            "str"
+          ],
+          "allowance": [
+            "float"
+          ],
+          "coverage_ratio": [
+            "float"
+          ],
+          "dimension_key": [
+            "str"
+          ],
+          "formula_id": [
+            "str"
+          ],
+          "gross_carrying_amount": [
+            "float"
+          ],
+          "instrument_count": [
+            "int"
+          ],
+          "net_carrying_amount": [
+            "float"
+          ]
+        }
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "allocate_credit_enhancements",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(collateral: 'Table', instruments: 'Table') -> 'list[Row]'",
+      "requirements": [
+        "FR-038"
+      ],
+      "documentation": "docs/api/allocate_credit_enhancements.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "allocate_credit_enhancements",
+      "tests": [
+        "tests/test_api.py::test_api_example[allocate_credit_enhancements]"
+      ],
+      "return_schema": {
+        "type": "table",
+        "fields": {
+          "allocated_amount": [
+            "float"
+          ],
+          "available_protection": [
+            "float"
+          ],
+          "collateral_id": [
+            "str"
+          ],
+          "formula_id": [
+            "str"
+          ],
+          "included_in_ecl": [
+            "bool"
+          ],
+          "instrument_id": [
+            "str"
+          ],
+          "recovery_year": [
+            "int"
+          ],
+          "source_reference": [
+            "str"
+          ]
+        }
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "allocate_overlay",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(amount: 'float', allocation_weights: 'Mapping[str, float]') -> 'dict[str, float]'",
+      "requirements": [
+        "FR-042"
+      ],
+      "documentation": "docs/api/allocate_overlay.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "allocate_overlay",
+      "tests": [
+        "tests/test_api.py::test_api_example[allocate_overlay]"
+      ],
+      "return_schema": {
+        "x": "float",
+        "y": "float"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "allowance_rollforward",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(instruments: 'Table', opening: 'Mapping[str, float]', ecl_results: 'Table', processed_events: 'Table', fx: 'Mapping[str, float]') -> 'list[Row]'",
+      "requirements": [
+        "FR-053"
+      ],
+      "documentation": "docs/api/allowance_rollforward.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "allowance_rollforward",
+      "tests": [
+        "tests/test_api.py::test_api_example[allowance_rollforward]"
+      ],
+      "return_schema": {
+        "type": "table",
+        "fields": {
+          "closing_allowance": [
+            "float"
+          ],
+          "current_stage": [
+            "str"
+          ],
+          "ecl_remeasurement": [
+            "float"
+          ],
+          "formula_id": [
+            "str"
+          ],
+          "instrument_id": [
+            "str"
+          ],
+          "opening_allowance": [
+            "float"
+          ],
+          "prior_stage": [
+            "NoneType"
+          ],
+          "writeoff": [
+            "int"
+          ]
+        }
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "amortisation_schedule",
+      "module": "financial_accounting_engine.formulas",
+      "signature": "(opening: 'float', eir: 'float', cashflows: 'Sequence[tuple[float, float]]') -> 'list[Row]'",
+      "requirements": [
+        "FR-021"
+      ],
+      "documentation": "docs/api/amortisation_schedule.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "amortisation_schedule",
+      "tests": [
+        "tests/test_api.py::test_api_example[amortisation_schedule]"
+      ],
+      "return_schema": {
+        "type": "table",
+        "fields": {
+          "cash_received": [
+            "int"
+          ],
+          "closing": [
+            "float"
+          ],
+          "interest": [
+            "float"
+          ],
+          "opening": [
+            "float"
+          ],
+          "time": [
+            "int"
+          ]
+        }
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "amortised_cost_step",
+      "module": "financial_accounting_engine.formulas",
+      "signature": "(opening: 'float', eir: 'float', time: 'float', cash_received: 'float', adjustment: 'float' = 0.0) -> 'float'",
+      "requirements": [
+        "FR-021"
+      ],
+      "documentation": "docs/api/amortised_cost_step.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "amortised_cost_step",
+      "tests": [
+        "tests/test_api.py::test_api_example[amortised_cost_step]"
+      ],
+      "return_schema": "float",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "assess_business_model",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(model: 'str') -> 'Row'",
+      "requirements": [
+        "FR-008"
+      ],
+      "documentation": "docs/api/assess_business_model.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "assess_business_model",
+      "tests": [
+        "tests/test_api.py::test_api_example[assess_business_model]"
+      ],
+      "return_schema": {
+        "business_model": "str",
+        "judgement_required": "bool",
+        "source_reference": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "assess_derecognition",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(event: 'Row', instrument: 'Row') -> 'Row'",
+      "requirements": [
+        "FR-025"
+      ],
+      "documentation": "docs/api/assess_derecognition.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "assess_derecognition",
+      "tests": [
+        "tests/test_api.py::test_api_example[assess_derecognition]"
+      ],
+      "return_schema": {
+        "event_id": "str",
+        "instrument_id": "str",
+        "event_type": "str",
+        "amount": "float",
+        "derecognition_result": "str",
+        "continuing_involvement": "float",
+        "modification_result": "float",
+        "pnl_effect": "float",
+        "reason_code": "str",
+        "formula_id": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "assess_hedge_effectiveness",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(relationship: 'Row') -> 'Row'",
+      "requirements": [
+        "FR-046"
+      ],
+      "documentation": "docs/api/assess_hedge_effectiveness.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "assess_hedge_effectiveness",
+      "tests": [
+        "tests/test_api.py::test_api_example[assess_hedge_effectiveness]"
+      ],
+      "return_schema": {
+        "relationship_id": "str",
+        "hedge_type": "str",
+        "status": "str",
+        "nature_dependent_electricity_hedge": "bool",
+        "ineffectiveness_pnl": "float",
+        "oci_effective": "float",
+        "cost_of_hedging_reserve": "float",
+        "recycle_amount": "float",
+        "basis_adjustment": "float",
+        "formula_id": "str",
+        "source_reference": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "assess_ibor_relief",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(applicable: 'bool', policy_reference: 'str', approval_reference: 'str') -> 'Row'",
+      "requirements": [
+        "FR-050"
+      ],
+      "documentation": "docs/api/assess_ibor_relief.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "assess_ibor_relief",
+      "tests": [
+        "tests/test_api.py::test_api_example[assess_ibor_relief]"
+      ],
+      "return_schema": {
+        "applicable": "bool",
+        "policy_reference": "str",
+        "approval_reference": "str",
+        "status": "str",
+        "source_reference": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "assess_reclassification",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(instrument: 'Row', features: 'Row') -> 'Row'",
+      "requirements": [
+        "FR-008"
+      ],
+      "documentation": "docs/api/assess_reclassification.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "assess_reclassification",
+      "tests": [
+        "tests/test_api.py::test_api_example[assess_reclassification]"
+      ],
+      "return_schema": {
+        "instrument_id": "str",
+        "classification": "str",
+        "reclassification_status": "str",
+        "source_reference": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "assess_recognition",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(instrument: 'Row') -> 'Row'",
+      "requirements": [
+        "FR-005",
+        "FR-006"
+      ],
+      "documentation": "docs/api/assess_recognition.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "assess_recognition",
+      "tests": [
+        "tests/test_api.py::test_api_example[assess_recognition]"
+      ],
+      "return_schema": {
+        "instrument_id": "str",
+        "scope_decision": "str",
+        "recognition_event": "str",
+        "regular_way_policy": "str",
+        "electronic_payment_result": "str",
+        "controlled_interface": "str",
+        "interface_decision_id": "NoneType",
+        "decision_rule_id": "str",
+        "source_reference": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "assess_scope",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(instrument: 'Row') -> 'Row'",
+      "requirements": [
+        "FR-001",
+        "FR-003",
+        "FR-004"
+      ],
+      "documentation": "docs/api/assess_scope.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "assess_scope",
+      "tests": [
+        "tests/test_api.py::test_api_example[assess_scope]"
+      ],
+      "return_schema": {
+        "instrument_id": "str",
+        "scope_decision": "str",
+        "recognition_event": "str",
+        "regular_way_policy": "str",
+        "electronic_payment_result": "str",
+        "controlled_interface": "str",
+        "interface_decision_id": "NoneType",
+        "decision_rule_id": "str",
+        "source_reference": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "assess_sicr",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(facts: 'Row', policy: 'Mapping[str, JSONValue] | None' = None) -> 'Row'",
+      "requirements": [
+        "FR-029",
+        "FR-030"
+      ],
+      "documentation": "docs/api/assess_sicr.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "assess_sicr",
+      "tests": [
+        "tests/test_api.py::test_api_example[assess_sicr]"
+      ],
+      "return_schema": {
+        "instrument_id": "str",
+        "sicr": "bool",
+        "stage": "str",
+        "reason": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "assess_sppi",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(features: 'Row') -> 'Row'",
+      "requirements": [
+        "FR-009",
+        "FR-010",
+        "FR-011",
+        "FR-012",
+        "FR-013"
+      ],
+      "documentation": "docs/api/assess_sppi.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "assess_sppi",
+      "tests": [
+        "tests/test_api.py::test_api_example[assess_sppi]"
+      ],
+      "return_schema": {
+        "sppi_pass": "bool",
+        "reason": "str",
+        "source_reference": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "assess_stage",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(facts: 'Row', policy: 'Mapping[str, JSONValue] | None' = None) -> 'Row'",
+      "requirements": [
+        "FR-028",
+        "FR-031",
+        "FR-032"
+      ],
+      "documentation": "docs/api/assess_stage.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "assess_stage",
+      "tests": [
+        "tests/test_api.py::test_api_example[assess_stage]"
+      ],
+      "return_schema": {
+        "instrument_id": "str",
+        "prior_stage": "str",
+        "stage": "str",
+        "stage_movement": "str",
+        "stage_reason": "str",
+        "decision_rule_id": "str",
+        "source_reference": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "backtest_ead",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(observations: 'Table') -> 'list[Row]'",
+      "requirements": [
+        "FR-043"
+      ],
+      "documentation": "docs/api/backtest_ead.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "backtest_ead",
+      "tests": [
+        "tests/test_api.py::test_api_example[backtest_ead]"
+      ],
+      "return_schema": {
+        "type": "table",
+        "fields": {
+          "approval_id": [
+            "str"
+          ],
+          "auc": [
+            "NoneType"
+          ],
+          "bias": [
+            "float"
+          ],
+          "calibration_ratio": [
+            "float"
+          ],
+          "challenger_flag": [
+            "bool"
+          ],
+          "formula_id": [
+            "str"
+          ],
+          "mean_absolute_error": [
+            "float"
+          ],
+          "model_owner": [
+            "str"
+          ],
+          "model_type": [
+            "str"
+          ],
+          "model_version_id": [
+            "str"
+          ],
+          "observations": [
+            "int"
+          ],
+          "release_amount": [
+            "float"
+          ],
+          "segment": [
+            "str"
+          ],
+          "validation_status": [
+            "str"
+          ],
+          "weighted_actual": [
+            "float"
+          ],
+          "weighted_prediction": [
+            "float"
+          ]
+        }
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "backtest_lgd",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(observations: 'Table') -> 'list[Row]'",
+      "requirements": [
+        "FR-043"
+      ],
+      "documentation": "docs/api/backtest_lgd.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "backtest_lgd",
+      "tests": [
+        "tests/test_api.py::test_api_example[backtest_lgd]"
+      ],
+      "return_schema": {
+        "type": "table",
+        "fields": {
+          "approval_id": [
+            "str"
+          ],
+          "auc": [
+            "NoneType"
+          ],
+          "bias": [
+            "float"
+          ],
+          "calibration_ratio": [
+            "float"
+          ],
+          "challenger_flag": [
+            "bool"
+          ],
+          "formula_id": [
+            "str"
+          ],
+          "mean_absolute_error": [
+            "float"
+          ],
+          "model_owner": [
+            "str"
+          ],
+          "model_type": [
+            "str"
+          ],
+          "model_version_id": [
+            "str"
+          ],
+          "observations": [
+            "int"
+          ],
+          "release_amount": [
+            "float"
+          ],
+          "segment": [
+            "str"
+          ],
+          "validation_status": [
+            "str"
+          ],
+          "weighted_actual": [
+            "float"
+          ],
+          "weighted_prediction": [
+            "float"
+          ]
+        }
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "backtest_models",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(observations: 'Table') -> 'list[Row]'",
+      "requirements": [
+        "FR-043"
+      ],
+      "documentation": "docs/api/backtest_models.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "backtest_models",
+      "tests": [
+        "tests/test_api.py::test_api_example[backtest_models]"
+      ],
+      "return_schema": {
+        "type": "table",
+        "fields": {
+          "approval_id": [
+            "str"
+          ],
+          "auc": [
+            "NoneType"
+          ],
+          "bias": [
+            "float"
+          ],
+          "calibration_ratio": [
+            "float"
+          ],
+          "challenger_flag": [
+            "bool"
+          ],
+          "formula_id": [
+            "str"
+          ],
+          "mean_absolute_error": [
+            "float"
+          ],
+          "model_owner": [
+            "str"
+          ],
+          "model_type": [
+            "str"
+          ],
+          "model_version_id": [
+            "str"
+          ],
+          "observations": [
+            "int"
+          ],
+          "release_amount": [
+            "float"
+          ],
+          "segment": [
+            "str"
+          ],
+          "validation_status": [
+            "str"
+          ],
+          "weighted_actual": [
+            "float"
+          ],
+          "weighted_prediction": [
+            "float"
+          ]
+        }
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "backtest_pd",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(observations: 'Table') -> 'list[Row]'",
+      "requirements": [
+        "FR-043"
+      ],
+      "documentation": "docs/api/backtest_pd.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "backtest_pd",
+      "tests": [
+        "tests/test_api.py::test_api_example[backtest_pd]"
+      ],
+      "return_schema": {
+        "type": "table",
+        "fields": {
+          "approval_id": [
+            "str"
+          ],
+          "auc": [
+            "NoneType"
+          ],
+          "bias": [
+            "float"
+          ],
+          "calibration_ratio": [
+            "float"
+          ],
+          "challenger_flag": [
+            "bool"
+          ],
+          "formula_id": [
+            "str"
+          ],
+          "mean_absolute_error": [
+            "float"
+          ],
+          "model_owner": [
+            "str"
+          ],
+          "model_type": [
+            "str"
+          ],
+          "model_version_id": [
+            "str"
+          ],
+          "observations": [
+            "int"
+          ],
+          "release_amount": [
+            "float"
+          ],
+          "segment": [
+            "str"
+          ],
+          "validation_status": [
+            "str"
+          ],
+          "weighted_actual": [
+            "float"
+          ],
+          "weighted_prediction": [
+            "float"
+          ]
+        }
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "backtest_staging",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(observations: 'Table') -> 'list[Row]'",
+      "requirements": [
+        "FR-043"
+      ],
+      "documentation": "docs/api/backtest_staging.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "backtest_staging",
+      "tests": [
+        "tests/test_api.py::test_api_example[backtest_staging]"
+      ],
+      "return_schema": {
+        "type": "table",
+        "fields": {
+          "approval_id": [
+            "str"
+          ],
+          "auc": [
+            "NoneType"
+          ],
+          "bias": [
+            "float"
+          ],
+          "calibration_ratio": [
+            "float"
+          ],
+          "challenger_flag": [
+            "bool"
+          ],
+          "formula_id": [
+            "str"
+          ],
+          "mean_absolute_error": [
+            "float"
+          ],
+          "model_owner": [
+            "str"
+          ],
+          "model_type": [
+            "str"
+          ],
+          "model_version_id": [
+            "str"
+          ],
+          "observations": [
+            "int"
+          ],
+          "release_amount": [
+            "float"
+          ],
+          "segment": [
+            "str"
+          ],
+          "validation_status": [
+            "str"
+          ],
+          "weighted_actual": [
+            "float"
+          ],
+          "weighted_prediction": [
+            "float"
+          ]
+        }
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "benchmark_ecl",
+      "module": "financial_accounting_engine.formulas",
+      "signature": "(iterations: 'int' = 10000) -> 'Row'",
+      "requirements": [
+        "FR-060"
+      ],
+      "documentation": "docs/api/benchmark_ecl.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "benchmark_ecl",
+      "tests": [
+        "tests/test_api.py::test_api_example[benchmark_ecl]"
+      ],
+      "return_schema": {
+        "iterations": "int",
+        "checksum": "float",
+        "elapsed_seconds": "float",
+        "peak_bytes": "int",
+        "formula_id": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "build_journals",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(ecl_results: 'Table', opening_allowances: 'Mapping[str, float]', classifications: 'Mapping[str, str]', instruments: 'Table', processed_events: 'Table' = (), own_credit_results: 'Table' = (), hedge_results: 'Table' = ()) -> 'list[Row]'",
+      "requirements": [
+        "FR-002",
+        "FR-016",
+        "FR-048",
+        "FR-052"
+      ],
+      "documentation": "docs/api/build_journals.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "build_journals",
+      "tests": [
+        "tests/test_api.py::test_api_example[build_journals]"
+      ],
+      "return_schema": {
+        "type": "table",
+        "fields": {
+          "account": [
+            "str"
+          ],
+          "credit": [
+            "float",
+            "int"
+          ],
+          "debit": [
+            "float",
+            "int"
+          ],
+          "instrument_id": [
+            "str"
+          ],
+          "journal_batch_id": [
+            "str"
+          ],
+          "movement_type": [
+            "str"
+          ]
+        }
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "cash_shortfall_ecl",
+      "module": "financial_accounting_engine.formulas",
+      "signature": "(contractual: 'Sequence[tuple[float, float]]', expected: 'Sequence[tuple[float, float]]', eir: 'float') -> 'float'",
+      "requirements": [
+        "FR-034"
+      ],
+      "documentation": "docs/api/cash_shortfall_ecl.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "cash_shortfall_ecl",
+      "tests": [
+        "tests/test_api.py::test_api_example[cash_shortfall_ecl]"
+      ],
+      "return_schema": "float",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "classify_instrument",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(instrument: 'Row', features: 'Row', scope_decision: 'str' = 'IN_IFRS9_SCOPE') -> 'Row'",
+      "requirements": [
+        "FR-001",
+        "FR-002",
+        "FR-007",
+        "FR-014",
+        "FR-015"
+      ],
+      "documentation": "docs/api/classify_instrument.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "classify_instrument",
+      "tests": [
+        "tests/test_api.py::test_api_example[classify_instrument]"
+      ],
+      "return_schema": {
+        "instrument_id": "str",
+        "classification": "str",
+        "sppi_result": "str",
+        "sppi_reason": "str",
+        "reclassification_status": "str",
+        "decision_rule_id": "str",
+        "source_reference": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "compare_challenger",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(reference: 'Table', challenger: 'Table') -> 'list[Row]'",
+      "requirements": [
+        "FR-043"
+      ],
+      "documentation": "docs/api/compare_challenger.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "compare_challenger",
+      "tests": [
+        "tests/test_api.py::test_api_example[compare_challenger]"
+      ],
+      "return_schema": {
+        "type": "table",
+        "fields": {
+          "bias_difference": [
+            "float"
+          ],
+          "mae_difference": [
+            "float"
+          ],
+          "model_type": [
+            "str"
+          ],
+          "segment": [
+            "str"
+          ],
+          "view": [
+            "str"
+          ]
+        }
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "component_ecl",
+      "module": "financial_accounting_engine.formulas",
+      "signature": "(marginal_pd: 'float', ead: 'float', lgd: 'float', eir: 'float', year: 'float') -> 'float'",
+      "requirements": [
+        "FR-033"
+      ],
+      "documentation": "docs/api/component_ecl.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "component_ecl",
+      "tests": [
+        "tests/test_api.py::test_api_example[component_ecl]"
+      ],
+      "return_schema": "float",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "continuing_involvement",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(event: 'Row', instrument: 'Row') -> 'Row'",
+      "requirements": [
+        "FR-025"
+      ],
+      "documentation": "docs/api/continuing_involvement.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "continuing_involvement",
+      "tests": [
+        "tests/test_api.py::test_api_example[continuing_involvement]"
+      ],
+      "return_schema": {
+        "event_id": "str",
+        "instrument_id": "str",
+        "event_type": "str",
+        "amount": "float",
+        "derecognition_result": "str",
+        "continuing_involvement": "float",
+        "modification_result": "float",
+        "pnl_effect": "float",
+        "reason_code": "str",
+        "formula_id": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "coverage_ratio",
+      "module": "financial_accounting_engine.formulas",
+      "signature": "(allowance: 'float', gross_exposure: 'float') -> 'float | None'",
+      "requirements": [
+        "FR-054"
+      ],
+      "documentation": "docs/api/coverage_ratio.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "coverage_ratio",
+      "tests": [
+        "tests/test_api.py::test_api_example[coverage_ratio]"
+      ],
+      "return_schema": "float",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "cumulative_pd_from_conditional",
+      "module": "financial_accounting_engine.formulas",
+      "signature": "(conditional: 'Sequence[float]') -> 'list[float]'",
+      "requirements": [
+        "FR-035"
+      ],
+      "documentation": "docs/api/cumulative_pd_from_conditional.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "cumulative_pd_from_conditional",
+      "tests": [
+        "tests/test_api.py::test_api_example[cumulative_pd_from_conditional]"
+      ],
+      "return_schema": {
+        "type": "list",
+        "items": [
+          "float",
+          "float"
+        ]
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "disclosure_facts",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(instruments: 'Table', ecl_results: 'Table', classifications: 'Mapping[str, str]', stages: 'Mapping[str, str]', fx: 'Mapping[str, float]', presentation_currency: 'str') -> 'list[Row]'",
+      "requirements": [
+        "FR-019",
+        "FR-054"
+      ],
+      "documentation": "docs/api/disclosure_facts.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "disclosure_facts",
+      "tests": [
+        "tests/test_api.py::test_api_example[disclosure_facts]"
+      ],
+      "return_schema": {
+        "type": "table",
+        "fields": {
+          "allowance": [
+            "float"
+          ],
+          "classification": [
+            "str"
+          ],
+          "currency": [
+            "str"
+          ],
+          "entity_id": [
+            "str"
+          ],
+          "fx_rate": [
+            "float"
+          ],
+          "gross_carrying_amount": [
+            "float"
+          ],
+          "instrument_id": [
+            "str"
+          ],
+          "net_carrying_amount": [
+            "float"
+          ],
+          "portfolio": [
+            "str"
+          ],
+          "presentation_currency": [
+            "str"
+          ],
+          "stage": [
+            "str"
+          ]
+        }
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "discount_factor",
+      "module": "financial_accounting_engine.formulas",
+      "signature": "(rate: 'float', year_fraction: 'float') -> 'float'",
+      "requirements": [
+        "FR-020"
+      ],
+      "documentation": "docs/api/discount_factor.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "discount_factor",
+      "tests": [
+        "tests/test_api.py::test_api_example[discount_factor]"
+      ],
+      "return_schema": "float",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "ead_profile",
+      "module": "financial_accounting_engine.formulas",
+      "signature": "(drawn: 'Sequence[float]', undrawn: 'Sequence[float]', ccf: 'Sequence[float]', prepayment: 'Sequence[float]') -> 'list[float]'",
+      "requirements": [
+        "FR-002",
+        "FR-036"
+      ],
+      "documentation": "docs/api/ead_profile.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "ead_profile",
+      "tests": [
+        "tests/test_api.py::test_api_example[ead_profile]"
+      ],
+      "return_schema": {
+        "type": "list",
+        "items": [
+          "float"
+        ]
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "effective_interest_rate",
+      "module": "financial_accounting_engine.formulas",
+      "signature": "(initial_net: 'float', cashflows: 'Sequence[tuple[float, float]]', tolerance: 'float' = 1e-12) -> 'float'",
+      "requirements": [
+        "FR-020"
+      ],
+      "documentation": "docs/api/effective_interest_rate.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "effective_interest_rate",
+      "tests": [
+        "tests/test_api.py::test_api_example[effective_interest_rate]"
+      ],
+      "return_schema": "float",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "export_profile",
+      "module": "financial_accounting_engine.data",
+      "signature": "(profile_id: 'str', destination: 'str | Path') -> 'Path'",
+      "requirements": [],
+      "documentation": "docs/api/export_profile.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "export_profile",
+      "tests": [
+        "tests/test_api.py::test_api_example[export_profile]"
+      ],
+      "return_schema": {
+        "type": "Path",
+        "meaning": "new export directory"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "export_results",
+      "module": "financial_accounting_engine.workflow",
+      "signature": "(result: 'AnalysisResult', destination: 'str | Path') -> 'Path'",
+      "requirements": [
+        "FR-059"
+      ],
+      "documentation": "docs/api/export_results.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "export_results",
+      "tests": [
+        "tests/test_api.py::test_api_example[export_results]"
+      ],
+      "return_schema": {
+        "type": "Path",
+        "meaning": "new export directory"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "get_controls",
+      "module": "financial_accounting_engine.workflow",
+      "signature": "(result: 'AnalysisResult') -> 'Table'",
+      "requirements": [
+        "FR-056"
+      ],
+      "documentation": "docs/api/get_controls.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "get_controls",
+      "tests": [
+        "tests/test_api.py::test_api_example[get_controls]"
+      ],
+      "return_schema": {
+        "type": "table",
+        "fields": {
+          "actual": [
+            "bool",
+            "float",
+            "int"
+          ],
+          "control_id": [
+            "str"
+          ],
+          "expected": [
+            "bool",
+            "float",
+            "int"
+          ],
+          "explanation": [
+            "str"
+          ],
+          "status": [
+            "str"
+          ],
+          "tolerance": [
+            "float"
+          ]
+        }
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "get_formula",
+      "module": "financial_accounting_engine.data",
+      "signature": "(formula_id: 'str', rule_set_id: 'str' = 'FIA_RULES_2026_V1') -> 'dict[str, JSONValue]'",
+      "requirements": [],
+      "documentation": "docs/api/get_formula.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "get_formula",
+      "tests": [
+        "tests/test_api.py::test_api_example[get_formula]"
+      ],
+      "return_schema": {
+        "id": "str",
+        "version": "str",
+        "name": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "get_lineage",
+      "module": "financial_accounting_engine.workflow",
+      "signature": "(result: 'AnalysisResult') -> 'dict[str, JSONValue]'",
+      "requirements": [
+        "FR-058"
+      ],
+      "documentation": "docs/api/get_lineage.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "get_lineage",
+      "tests": [
+        "tests/test_api.py::test_api_example[get_lineage]"
+      ],
+      "return_schema": {
+        "input_hash": "str",
+        "policy_hash": "str",
+        "rule_hash": "str",
+        "code_hash": "str",
+        "resource_hash": "str",
+        "engine_version": "str",
+        "contract_version": "str",
+        "policy_id": "str",
+        "rule_set_id": "str",
+        "as_of_date": "str",
+        "knowledge_time": "str",
+        "official": "bool",
+        "run_id": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "get_metrics",
+      "module": "financial_accounting_engine.workflow",
+      "signature": "(result: 'AnalysisResult') -> 'dict[str, JSONValue]'",
+      "requirements": [],
+      "documentation": "docs/api/get_metrics.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "get_metrics",
+      "tests": [
+        "tests/test_api.py::test_api_example[get_metrics]"
+      ],
+      "return_schema": {
+        "opening_gross_exposure": "float",
+        "closing_gross_exposure": "float",
+        "final_ecl_before_writeoff": "float",
+        "closing_allowance": "float",
+        "net_carrying_amount": "float",
+        "classification_distribution": {
+          "AC_HOST_PLUS_SEPARATE_DERIVATIVE": "int",
+          "AMORTISED_COST": "int",
+          "AMORTISED_COST_LIABILITY": "int",
+          "FINANCIAL_GUARANTEE": "int",
+          "FVOCI_DEBT": "int",
+          "FVOCI_EQUITY": "int",
+          "FVTPL": "int",
+          "FVTPL_LIABILITY": "int",
+          "LOAN_COMMITMENT": "int",
+          "NO_IFRS9_SCOPE": "int"
+        },
+        "stage_distribution": {
+          "NO_IMPAIRMENT_SCOPE": "int",
+          "POCI": "int",
+          "SIMPLIFIED_LIFETIME": "int",
+          "STAGE_1": "int",
+          "STAGE_2": "int",
+          "STAGE_3": "int"
+        },
+        "hedge_status_distribution": {
+          "DISCONTINUED": "int",
+          "ELIGIBLE": "int",
+          "REBALANCE_REQUIRED": "int"
+        },
+        "fvoci_oci_movement": "float",
+        "hedge_reserve_movement": "float",
+        "journal_batches": "int",
+        "backtesting_result_sets": "int"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "get_parameters",
+      "module": "financial_accounting_engine.data",
+      "signature": "(policy_id: 'str' = 'EU_FINANCIAL_INSTRUMENTS_2026_V1') -> 'dict[str, JSONValue]'",
+      "requirements": [],
+      "documentation": "docs/api/get_parameters.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "get_parameters",
+      "tests": [
+        "tests/test_api.py::test_api_example[get_parameters]"
+      ],
+      "return_schema": {
+        "policy_id": "str",
+        "version": "str",
+        "reporting_date": "str",
+        "knowledge_time": "str",
+        "jurisdiction": "str",
+        "reporting_scope": "str",
+        "presentation_currency": "str",
+        "regular_way_policy": "str",
+        "electronic_payment_derecognition_election": "bool",
+        "hedge_accounting_policy": "str",
+        "low_credit_risk_relief": "bool",
+        "past_due_sicr_days": "int",
+        "default_backstop_days": "int",
+        "rating_notch_sicr": "int",
+        "absolute_lifetime_pd_sicr": "float",
+        "relative_lifetime_pd_sicr": "float",
+        "cure_months": "int",
+        "probation_months": "int",
+        "scenario_weight_tolerance": "float",
+        "money_rounding": "str",
+        "money_decimals": "int",
+        "day_count": "str",
+        "official_status_limit": "str",
+        "source_rule_set": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "get_policy",
+      "module": "financial_accounting_engine.data",
+      "signature": "(policy_id: 'str' = 'EU_FINANCIAL_INSTRUMENTS_2026_V1') -> 'dict[str, JSONValue]'",
+      "requirements": [],
+      "documentation": "docs/api/get_policy.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "get_policy",
+      "tests": [
+        "tests/test_api.py::test_api_example[get_policy]"
+      ],
+      "return_schema": {
+        "policy_id": "str",
+        "version": "str",
+        "reporting_date": "str",
+        "knowledge_time": "str",
+        "jurisdiction": "str",
+        "reporting_scope": "str",
+        "presentation_currency": "str",
+        "regular_way_policy": "str",
+        "electronic_payment_derecognition_election": "bool",
+        "hedge_accounting_policy": "str",
+        "low_credit_risk_relief": "bool",
+        "past_due_sicr_days": "int",
+        "default_backstop_days": "int",
+        "rating_notch_sicr": "int",
+        "absolute_lifetime_pd_sicr": "float",
+        "relative_lifetime_pd_sicr": "float",
+        "cure_months": "int",
+        "probation_months": "int",
+        "scenario_weight_tolerance": "float",
+        "money_rounding": "str",
+        "money_decimals": "int",
+        "day_count": "str",
+        "official_status_limit": "str",
+        "source_rule_set": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "get_schema",
+      "module": "financial_accounting_engine.data",
+      "signature": "(table: 'str | None' = None) -> 'dict[str, JSONValue]'",
+      "requirements": [],
+      "documentation": "docs/api/get_schema.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "get_schema",
+      "tests": [
+        "tests/test_api.py::test_api_example[get_schema]"
+      ],
+      "return_schema": {
+        "workbook": "str",
+        "columns": {
+          "type": "list",
+          "items": [
+            "str",
+            "str",
+            "str"
+          ]
+        },
+        "fields": {
+          "type": "table",
+          "fields": {
+            "description": [
+              "str"
+            ],
+            "domain": [
+              "NoneType",
+              "str"
+            ],
+            "field": [
+              "str"
+            ],
+            "key": [
+              "NoneType",
+              "str"
+            ],
+            "nullable": [
+              "str"
+            ],
+            "origin": [
+              "str"
+            ],
+            "time_reference": [
+              "str"
+            ],
+            "type": [
+              "str"
+            ],
+            "unit": [
+              "str"
+            ]
+          }
+        }
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "get_sources",
+      "module": "financial_accounting_engine.data",
+      "signature": "() -> 'list[dict[str, JSONValue]]'",
+      "requirements": [],
+      "documentation": "docs/api/get_sources.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "get_sources",
+      "tests": [
+        "tests/test_api.py::test_api_example[get_sources]"
+      ],
+      "return_schema": {
+        "type": "table",
+        "fields": {
+          "archival_sha256": [
+            "str"
+          ],
+          "issuer": [
+            "str"
+          ],
+          "legal_status": [
+            "str"
+          ],
+          "official_url": [
+            "str"
+          ],
+          "redistributed": [
+            "bool"
+          ],
+          "source_id": [
+            "str"
+          ],
+          "source_type": [
+            "str"
+          ],
+          "title": [
+            "str"
+          ],
+          "topics": [
+            "list"
+          ]
+        }
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "get_table",
+      "module": "financial_accounting_engine.workflow",
+      "signature": "(result: 'AnalysisResult', name: 'str') -> 'Table'",
+      "requirements": [],
+      "documentation": "docs/api/get_table.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "get_table",
+      "tests": [
+        "tests/test_api.py::test_api_example[get_table]"
+      ],
+      "return_schema": {
+        "type": "table",
+        "fields": {
+          "accounting_policy_id": [
+            "str"
+          ],
+          "as_of_date": [
+            "str"
+          ],
+          "decision_rule_id": [
+            "str"
+          ],
+          "formula_id": [
+            "NoneType"
+          ],
+          "instrument_id": [
+            "str"
+          ],
+          "knowledge_time": [
+            "str"
+          ],
+          "official_flag": [
+            "bool"
+          ],
+          "prior_stage": [
+            "str"
+          ],
+          "result_version": [
+            "str"
+          ],
+          "rule_set_id": [
+            "str"
+          ],
+          "run_id": [
+            "str"
+          ],
+          "source_object_id": [
+            "str"
+          ],
+          "source_reference": [
+            "str"
+          ],
+          "stage": [
+            "str"
+          ],
+          "stage_movement": [
+            "str"
+          ],
+          "stage_reason": [
+            "str"
+          ],
+          "view": [
+            "str"
+          ]
+        }
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "gross_rollforward",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(instruments: 'Table', opening: 'Mapping[str, float]', processed_events: 'Table', fx: 'Mapping[str, float]') -> 'list[Row]'",
+      "requirements": [
+        "FR-053"
+      ],
+      "documentation": "docs/api/gross_rollforward.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "gross_rollforward",
+      "tests": [
+        "tests/test_api.py::test_api_example[gross_rollforward]"
+      ],
+      "return_schema": {
+        "type": "table",
+        "fields": {
+          "closing_gross": [
+            "float"
+          ],
+          "derecognition": [
+            "int"
+          ],
+          "formula_id": [
+            "str"
+          ],
+          "instrument_id": [
+            "str"
+          ],
+          "modification": [
+            "int"
+          ],
+          "opening_gross": [
+            "float"
+          ],
+          "other_contractual_and_fx_movements": [
+            "float"
+          ],
+          "writeoff": [
+            "int"
+          ]
+        }
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "hedge_ineffectiveness",
+      "module": "financial_accounting_engine.formulas",
+      "signature": "(hedging_change: 'float', hedged_change: 'float') -> 'float'",
+      "requirements": [],
+      "documentation": "docs/api/hedge_ineffectiveness.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "hedge_ineffectiveness",
+      "tests": [
+        "tests/test_api.py::test_api_example[hedge_ineffectiveness]"
+      ],
+      "return_schema": "float",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "hedge_reserve_rollforward",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(opening: 'float', hedge_results: 'Table') -> 'Row'",
+      "requirements": [
+        "FR-047",
+        "FR-048",
+        "FR-055"
+      ],
+      "documentation": "docs/api/hedge_reserve_rollforward.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "hedge_reserve_rollforward",
+      "tests": [
+        "tests/test_api.py::test_api_example[hedge_reserve_rollforward]"
+      ],
+      "return_schema": {
+        "opening_reserve": "float",
+        "fair_value_movement": "float",
+        "effective_hedge_movement": "float",
+        "cost_of_hedging_movement": "float",
+        "recycling": "float",
+        "basis_adjustment": "float",
+        "closing_reserve": "float"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "impairment_scope",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(instrument: 'Row') -> 'Row'",
+      "requirements": [
+        "FR-027"
+      ],
+      "documentation": "docs/api/impairment_scope.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "impairment_scope",
+      "tests": [
+        "tests/test_api.py::test_api_example[impairment_scope]"
+      ],
+      "return_schema": {
+        "instrument_id": "str",
+        "approach": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "initial_measurement",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(instrument: 'Row', category: 'str') -> 'Row'",
+      "requirements": [
+        "FR-017"
+      ],
+      "documentation": "docs/api/initial_measurement.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "initial_measurement",
+      "tests": [
+        "tests/test_api.py::test_api_example[initial_measurement]"
+      ],
+      "return_schema": {
+        "instrument_id": "str",
+        "initial_carrying_amount": "float",
+        "transaction_cost_treatment": "str",
+        "day_one_difference": "float",
+        "formula_id": "str",
+        "source_reference": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "interest_revenue",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(instrument: 'Row', stage: 'str', allowance: 'float') -> 'Row'",
+      "requirements": [
+        "FR-022"
+      ],
+      "documentation": "docs/api/interest_revenue.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "interest_revenue",
+      "tests": [
+        "tests/test_api.py::test_api_example[interest_revenue]"
+      ],
+      "return_schema": {
+        "instrument_id": "str",
+        "interest_basis": "float",
+        "interest_rate": "float",
+        "interest_revenue": "float",
+        "interest_method": "str",
+        "formula_id": "str",
+        "source_reference": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "lgd_from_recoveries",
+      "module": "financial_accounting_engine.formulas",
+      "signature": "(ead: 'float', recoveries: 'Sequence[tuple[float, float]]', eir: 'float', costs: 'Sequence[tuple[float, float]]' = ()) -> 'float'",
+      "requirements": [
+        "FR-037"
+      ],
+      "documentation": "docs/api/lgd_from_recoveries.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "lgd_from_recoveries",
+      "tests": [
+        "tests/test_api.py::test_api_example[lgd_from_recoveries]"
+      ],
+      "return_schema": "float",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "liability_modification_test",
+      "module": "financial_accounting_engine.formulas",
+      "signature": "(original_present_value: 'float', modified_present_value: 'float', qualitative_substantial: 'bool' = False, threshold: 'float' = 0.1) -> 'Row'",
+      "requirements": [
+        "FR-024"
+      ],
+      "documentation": "docs/api/liability_modification_test.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "liability_modification_test",
+      "tests": [
+        "tests/test_api.py::test_api_example[liability_modification_test]"
+      ],
+      "return_schema": {
+        "ratio": "float",
+        "substantial": "bool",
+        "threshold": "float"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "list_profiles",
+      "module": "financial_accounting_engine.data",
+      "signature": "() -> 'tuple[str, ...]'",
+      "requirements": [],
+      "documentation": "docs/api/list_profiles.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "list_profiles",
+      "tests": [
+        "tests/test_api.py::test_api_example[list_profiles]"
+      ],
+      "return_schema": {
+        "type": "tuple",
+        "items": [
+          "str",
+          "str"
+        ]
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "load_reference_data",
+      "module": "financial_accounting_engine.data",
+      "signature": "(profile_id: 'str') -> 'dict[str, list[Row]]'",
+      "requirements": [],
+      "documentation": "docs/api/load_reference_data.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "load_reference_data",
+      "tests": [
+        "tests/test_api.py::test_api_example[load_reference_data]"
+      ],
+      "return_schema": {
+        "run_control": {
+          "type": "table",
+          "fields": {
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "contract_version": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "knowledge_time": [
+              "str"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "policy_id": [
+              "str"
+            ],
+            "profile_id": [
+              "str"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "reporting_date": [
+              "str"
+            ],
+            "rule_set_id": [
+              "str"
+            ],
+            "run_key": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ],
+            "view": [
+              "str"
+            ]
+          }
+        },
+        "entities": {
+          "type": "table",
+          "fields": {
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "consolidation_scope": [
+              "str"
+            ],
+            "entity_id": [
+              "str"
+            ],
+            "entity_name": [
+              "str"
+            ],
+            "functional_currency": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ]
+          }
+        },
+        "parties": {
+          "type": "table",
+          "fields": {
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "default_flag": [
+              "bool"
+            ],
+            "forbearance": [
+              "bool"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "party_id": [
+              "str"
+            ],
+            "rating_current": [
+              "int"
+            ],
+            "rating_orig": [
+              "int"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ],
+            "watchlist": [
+              "bool"
+            ]
+          }
+        },
+        "instruments": {
+          "type": "table",
+          "fields": {
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "business_model": [
+              "str"
+            ],
+            "contingent_feature": [
+              "NoneType"
+            ],
+            "credit_adjusted_eir": [
+              "int"
+            ],
+            "currency": [
+              "str"
+            ],
+            "designation_approval_id": [
+              "str"
+            ],
+            "ecl_method": [
+              "str"
+            ],
+            "eir": [
+              "float",
+              "int"
+            ],
+            "electronic_payment_election": [
+              "bool"
+            ],
+            "embedded_derivative_separated": [
+              "bool"
+            ],
+            "entity_id": [
+              "str"
+            ],
+            "equity": [
+              "NoneType"
+            ],
+            "fair_value": [
+              "int"
+            ],
+            "fair_value_option": [
+              "bool"
+            ],
+            "fvoci_equity_election": [
+              "NoneType"
+            ],
+            "gross_amount": [
+              "int"
+            ],
+            "guarantee_amount": [
+              "int"
+            ],
+            "held_for_trading": [
+              "NoneType"
+            ],
+            "host_contract_type": [
+              "str"
+            ],
+            "hybrid_contract": [
+              "bool"
+            ],
+            "impairment_scope": [
+              "str"
+            ],
+            "initial_recognition_date": [
+              "str"
+            ],
+            "instrument_id": [
+              "str"
+            ],
+            "instrument_type": [
+              "str"
+            ],
+            "interface_approved": [
+              "bool"
+            ],
+            "interface_decision_id": [
+              "NoneType"
+            ],
+            "interface_standard": [
+              "NoneType"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "liability": [
+              "NoneType"
+            ],
+            "maturity_date": [
+              "str"
+            ],
+            "nature_dependent_contract": [
+              "bool"
+            ],
+            "overlay": [
+              "int"
+            ],
+            "overlay_approved": [
+              "bool"
+            ],
+            "overlay_double_count_checked": [
+              "bool"
+            ],
+            "overlay_expiry": [
+              "NoneType",
+              "str"
+            ],
+            "overlay_id": [
+              "NoneType",
+              "str"
+            ],
+            "overlay_owner": [
+              "NoneType",
+              "str"
+            ],
+            "overlay_thesis": [
+              "NoneType",
+              "str"
+            ],
+            "own_use": [
+              "bool"
+            ],
+            "payment_irrevocable": [
+              "bool"
+            ],
+            "poci": [
+              "NoneType"
+            ],
+            "poci_initial_lifetime_ecl": [
+              "int"
+            ],
+            "portfolio": [
+              "str"
+            ],
+            "provision_rate": [
+              "float",
+              "int"
+            ],
+            "purchaser_net_buyer": [
+              "bool"
+            ],
+            "quantity_consistent_expected_usage": [
+              "bool"
+            ],
+            "rate_type": [
+              "str"
+            ],
+            "recognition_status": [
+              "str"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "regular_way": [
+              "bool"
+            ],
+            "regulatory_approach": [
+              "str"
+            ],
+            "regulatory_default_flag": [
+              "bool"
+            ],
+            "regulatory_expected_loss": [
+              "int"
+            ],
+            "repurchase_within_reasonable_time": [
+              "bool"
+            ],
+            "reset_rate": [
+              "NoneType"
+            ],
+            "sale_timing_uncontrollable": [
+              "bool"
+            ],
+            "scope_assessment": [
+              "str"
+            ],
+            "settlement_risk_insignificant": [
+              "bool"
+            ],
+            "settlement_short_period": [
+              "bool"
+            ],
+            "simplified": [
+              "NoneType",
+              "bool"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "trade_date_policy": [
+              "str"
+            ],
+            "transaction_costs": [
+              "int"
+            ],
+            "transaction_price": [
+              "int"
+            ],
+            "undrawn": [
+              "int"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ],
+            "withdrawal_access_practical": [
+              "bool"
+            ]
+          }
+        },
+        "cashflows": {
+          "type": "table",
+          "fields": {
+            "amount": [
+              "int"
+            ],
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "cashflow_id": [
+              "str"
+            ],
+            "cashflow_type": [
+              "str"
+            ],
+            "contractual": [
+              "bool"
+            ],
+            "expected": [
+              "bool"
+            ],
+            "include_in_eir": [
+              "bool"
+            ],
+            "instrument_id": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "scenario_id": [
+              "NoneType"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ],
+            "year_fraction": [
+              "int"
+            ]
+          }
+        },
+        "opening_balances": {
+          "type": "table",
+          "fields": {
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "instrument_id": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "ledger_allowance": [
+              "int"
+            ],
+            "ledger_gross": [
+              "int"
+            ],
+            "opening_allowance": [
+              "int"
+            ],
+            "opening_fvoci_reserve": [
+              "int"
+            ],
+            "opening_gross": [
+              "int"
+            ],
+            "opening_hedge_reserve": [
+              "int"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ]
+          }
+        },
+        "classification_inputs": {
+          "type": "table",
+          "fields": {
+            "approval_id": [
+              "str"
+            ],
+            "as_of_date": [
+              "str"
+            ],
+            "basic_interest": [
+              "bool"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "business_model": [
+              "str"
+            ],
+            "business_model_change": [
+              "bool"
+            ],
+            "cli_lookthrough_pass": [
+              "bool"
+            ],
+            "contingent_feature_basic": [
+              "bool"
+            ],
+            "de_minimis_or_non_genuine": [
+              "bool"
+            ],
+            "designation": [
+              "str"
+            ],
+            "extension_basic": [
+              "bool"
+            ],
+            "instrument_id": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "leverage": [
+              "bool"
+            ],
+            "modified_time_value_pass": [
+              "bool"
+            ],
+            "non_recourse_pass": [
+              "bool"
+            ],
+            "prepayment_compensation_reasonable": [
+              "bool"
+            ],
+            "principal_consistent": [
+              "bool"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "sppi_override": [
+              "NoneType"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ]
+          }
+        },
+        "collateral": {
+          "type": "table",
+          "fields": {
+            "allocated_amount": [
+              "int"
+            ],
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "collateral_id": [
+              "str"
+            ],
+            "collateral_type": [
+              "str"
+            ],
+            "cost": [
+              "int"
+            ],
+            "fair_value": [
+              "int"
+            ],
+            "haircut": [
+              "float"
+            ],
+            "instrument_id": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "recovery_year": [
+              "int"
+            ],
+            "separately_recognised": [
+              "bool"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ]
+          }
+        },
+        "staging_inputs": {
+          "type": "table",
+          "fields": {
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "collective_assessment": [
+              "bool"
+            ],
+            "credit_impaired": [
+              "bool"
+            ],
+            "days_past_due": [
+              "int"
+            ],
+            "forbearance": [
+              "bool"
+            ],
+            "forward_looking_sicr": [
+              "bool"
+            ],
+            "impairment_scope": [
+              "str"
+            ],
+            "instrument_id": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "lifetime_pd_current": [
+              "NoneType"
+            ],
+            "lifetime_pd_orig": [
+              "NoneType"
+            ],
+            "low_credit_risk": [
+              "bool"
+            ],
+            "months_since_cure": [
+              "int"
+            ],
+            "months_since_forbearance": [
+              "int"
+            ],
+            "override_approved": [
+              "bool"
+            ],
+            "override_expiry": [
+              "NoneType"
+            ],
+            "override_reason": [
+              "NoneType"
+            ],
+            "poci": [
+              "bool"
+            ],
+            "prior_stage": [
+              "str"
+            ],
+            "rating_current": [
+              "int"
+            ],
+            "rating_orig": [
+              "int"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "sicr_override": [
+              "NoneType"
+            ],
+            "sicr_rebuttal": [
+              "bool"
+            ],
+            "simplified": [
+              "bool"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "unlikely_to_pay": [
+              "bool"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ],
+            "watchlist": [
+              "bool"
+            ]
+          }
+        },
+        "pd_curves": {
+          "type": "table",
+          "fields": {
+            "approval_id": [
+              "str"
+            ],
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "instrument_id": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "marginal_pd": [
+              "float"
+            ],
+            "model_owner": [
+              "str"
+            ],
+            "model_version_id": [
+              "str"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "scenario_id": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "validation_status": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ],
+            "year": [
+              "int"
+            ]
+          }
+        },
+        "lgd_profiles": {
+          "type": "table",
+          "fields": {
+            "approval_id": [
+              "str"
+            ],
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "instrument_id": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "lgd": [
+              "float"
+            ],
+            "model_owner": [
+              "str"
+            ],
+            "model_version_id": [
+              "str"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "recovery_present_value": [
+              "float",
+              "int"
+            ],
+            "resolution_path": [
+              "str"
+            ],
+            "scenario_id": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "validation_status": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ],
+            "workout_cost": [
+              "int"
+            ],
+            "year": [
+              "int"
+            ]
+          }
+        },
+        "ead_profiles": {
+          "type": "table",
+          "fields": {
+            "approval_id": [
+              "str"
+            ],
+            "as_of_date": [
+              "str"
+            ],
+            "behavioural_horizon_years": [
+              "int"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "ccf": [
+              "float",
+              "int"
+            ],
+            "ead": [
+              "int"
+            ],
+            "instrument_id": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "model_owner": [
+              "str"
+            ],
+            "model_version_id": [
+              "str"
+            ],
+            "prepayment_rate": [
+              "int"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "scenario_id": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "validation_status": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ],
+            "year": [
+              "int"
+            ]
+          }
+        },
+        "scenarios": {
+          "type": "table",
+          "fields": {
+            "approved_at": [
+              "str"
+            ],
+            "approved_by": [
+              "str"
+            ],
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "forecast_horizon_years": [
+              "int"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "mean_reversion_method": [
+              "str"
+            ],
+            "probability": [
+              "float"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "scenario_id": [
+              "str"
+            ],
+            "scenario_version": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ]
+          }
+        },
+        "events": {
+          "type": "table",
+          "fields": {}
+        },
+        "market_data": {
+          "type": "table",
+          "fields": {
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "day_one_difference": [
+              "int"
+            ],
+            "fair_value": [
+              "int"
+            ],
+            "fx_rate": [
+              "int"
+            ],
+            "ifrs13_level": [
+              "int"
+            ],
+            "instrument_id": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "market_data_id": [
+              "str"
+            ],
+            "own_credit_change": [
+              "int"
+            ],
+            "own_credit_oci_mismatch": [
+              "bool"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "total_fv_change": [
+              "int"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "valuation_model": [
+              "str"
+            ],
+            "valuation_status": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ]
+          }
+        },
+        "hedges": {
+          "type": "table",
+          "fields": {}
+        },
+        "parameters": {
+          "type": "table",
+          "fields": {
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "parameter_id": [
+              "str"
+            ],
+            "parameter_value": [
+              "str"
+            ],
+            "policy_id": [
+              "str"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "rule_set_id": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_reference": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "unit": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ]
+          }
+        },
+        "mappings": {
+          "type": "table",
+          "fields": {}
+        },
+        "backtesting": {
+          "type": "table",
+          "fields": {
+            "actual_value": [
+              "float",
+              "int"
+            ],
+            "approval_id": [
+              "str"
+            ],
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "challenger_flag": [
+              "bool"
+            ],
+            "exposure_weight": [
+              "int"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "model_owner": [
+              "str"
+            ],
+            "model_type": [
+              "str"
+            ],
+            "model_version_id": [
+              "str"
+            ],
+            "observation_date": [
+              "str"
+            ],
+            "observation_id": [
+              "str"
+            ],
+            "outcome_flag": [
+              "bool"
+            ],
+            "predicted_value": [
+              "float",
+              "int"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "release_amount": [
+              "int"
+            ],
+            "segment": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "validation_status": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ]
+          }
+        }
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "marginal_pd_from_cumulative",
+      "module": "financial_accounting_engine.formulas",
+      "signature": "(cumulative: 'Sequence[float]') -> 'list[float]'",
+      "requirements": [
+        "FR-035"
+      ],
+      "documentation": "docs/api/marginal_pd_from_cumulative.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "marginal_pd_from_cumulative",
+      "tests": [
+        "tests/test_api.py::test_api_example[marginal_pd_from_cumulative]"
+      ],
+      "return_schema": {
+        "type": "list",
+        "items": [
+          "float",
+          "float"
+        ]
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "measure_hedge",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(relationship: 'Row') -> 'Row'",
+      "requirements": [
+        "FR-045",
+        "FR-047",
+        "FR-049"
+      ],
+      "documentation": "docs/api/measure_hedge.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "measure_hedge",
+      "tests": [
+        "tests/test_api.py::test_api_example[measure_hedge]"
+      ],
+      "return_schema": {
+        "relationship_id": "str",
+        "hedge_type": "str",
+        "status": "str",
+        "nature_dependent_electricity_hedge": "bool",
+        "ineffectiveness_pnl": "float",
+        "oci_effective": "float",
+        "cost_of_hedging_reserve": "float",
+        "recycle_amount": "float",
+        "basis_adjustment": "float",
+        "formula_id": "str",
+        "source_reference": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "modification_gain_loss",
+      "module": "financial_accounting_engine.formulas",
+      "signature": "(gross_before: 'float', modified_cashflows: 'Sequence[tuple[float, float]]', original_eir: 'float') -> 'float'",
+      "requirements": [
+        "FR-023"
+      ],
+      "documentation": "docs/api/modification_gain_loss.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "modification_gain_loss",
+      "tests": [
+        "tests/test_api.py::test_api_example[modification_gain_loss]"
+      ],
+      "return_schema": "float",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "oci_rollforward",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(opening: 'float', fair_value_movement: 'float' = 0, effective_hedge_movement: 'float' = 0, costs: 'float' = 0, recycling: 'float' = 0, basis_adjustment: 'float' = 0) -> 'Row'",
+      "requirements": [
+        "FR-055"
+      ],
+      "documentation": "docs/api/oci_rollforward.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "oci_rollforward",
+      "tests": [
+        "tests/test_api.py::test_api_example[oci_rollforward]"
+      ],
+      "return_schema": {
+        "opening_reserve": "float",
+        "fair_value_movement": "float",
+        "effective_hedge_movement": "float",
+        "cost_of_hedging_movement": "float",
+        "recycling": "float",
+        "basis_adjustment": "float",
+        "closing_reserve": "float"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "poci_allowance_change",
+      "module": "financial_accounting_engine.formulas",
+      "signature": "(current_lifetime_ecl: 'float', initial_lifetime_ecl: 'float') -> 'float'",
+      "requirements": [
+        "FR-041"
+      ],
+      "documentation": "docs/api/poci_allowance_change.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "poci_allowance_change",
+      "tests": [
+        "tests/test_api.py::test_api_example[poci_allowance_change]"
+      ],
+      "return_schema": "float",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "present_fair_value",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(instrument: 'Row', market: 'Row', category: 'str') -> 'Row'",
+      "requirements": [
+        "FR-018"
+      ],
+      "documentation": "docs/api/present_fair_value.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "present_fair_value",
+      "tests": [
+        "tests/test_api.py::test_api_example[present_fair_value]"
+      ],
+      "return_schema": {
+        "instrument_id": "str",
+        "classification": "str",
+        "fair_value": "float",
+        "total_fv_change": "float",
+        "pnl_fv_change": "float",
+        "oci_fv_change": "float",
+        "recycling_policy": "str",
+        "ifrs13_level": "int",
+        "valuation_model": "str",
+        "valuation_status": "str",
+        "formula_id": "str",
+        "source_reference": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "process_modification",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(event: 'Row', instrument: 'Row') -> 'Row'",
+      "requirements": [
+        "FR-023",
+        "FR-024"
+      ],
+      "documentation": "docs/api/process_modification.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "process_modification",
+      "tests": [
+        "tests/test_api.py::test_api_example[process_modification]"
+      ],
+      "return_schema": {
+        "event_id": "str",
+        "instrument_id": "str",
+        "event_type": "str",
+        "amount": "float",
+        "derecognition_result": "str",
+        "continuing_involvement": "float",
+        "modification_result": "float",
+        "pnl_effect": "float",
+        "reason_code": "str",
+        "formula_id": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "process_recovery",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(event: 'Row', instrument: 'Row') -> 'Row'",
+      "requirements": [
+        "FR-026"
+      ],
+      "documentation": "docs/api/process_recovery.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "process_recovery",
+      "tests": [
+        "tests/test_api.py::test_api_example[process_recovery]"
+      ],
+      "return_schema": {
+        "event_id": "str",
+        "instrument_id": "str",
+        "event_type": "str",
+        "amount": "float",
+        "derecognition_result": "str",
+        "continuing_involvement": "float",
+        "modification_result": "float",
+        "pnl_effect": "float",
+        "reason_code": "str",
+        "formula_id": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "process_writeoff",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(event: 'Row', instrument: 'Row') -> 'Row'",
+      "requirements": [
+        "FR-026"
+      ],
+      "documentation": "docs/api/process_writeoff.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "process_writeoff",
+      "tests": [
+        "tests/test_api.py::test_api_example[process_writeoff]"
+      ],
+      "return_schema": {
+        "event_id": "str",
+        "instrument_id": "str",
+        "event_type": "str",
+        "amount": "float",
+        "derecognition_result": "str",
+        "continuing_involvement": "float",
+        "modification_result": "float",
+        "pnl_effect": "float",
+        "reason_code": "str",
+        "formula_id": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "provision_matrix_ecl",
+      "module": "financial_accounting_engine.formulas",
+      "signature": "(exposure: 'float', loss_rate: 'float') -> 'float'",
+      "requirements": [
+        "FR-040"
+      ],
+      "documentation": "docs/api/provision_matrix_ecl.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "provision_matrix_ecl",
+      "tests": [
+        "tests/test_api.py::test_api_example[provision_matrix_ecl]"
+      ],
+      "return_schema": "float",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "reconcile_ledger",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(expected: 'float', actual: 'float', tolerance: 'float' = 1e-09) -> 'Row'",
+      "requirements": [
+        "FR-056"
+      ],
+      "documentation": "docs/api/reconcile_ledger.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "reconcile_ledger",
+      "tests": [
+        "tests/test_api.py::test_api_example[reconcile_ledger]"
+      ],
+      "return_schema": {
+        "expected": "float",
+        "actual": "float",
+        "difference": "float",
+        "tolerance": "float",
+        "status": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "reconcile_overlay",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(amount: 'float', allocations: 'Mapping[str, float]', tolerance: 'float' = 1e-09) -> 'Row'",
+      "requirements": [
+        "FR-042"
+      ],
+      "documentation": "docs/api/reconcile_overlay.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "reconcile_overlay",
+      "tests": [
+        "tests/test_api.py::test_api_example[reconcile_overlay]"
+      ],
+      "return_schema": {
+        "expected": "float",
+        "actual": "float",
+        "difference": "float",
+        "tolerance": "float",
+        "status": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "recovery_present_value",
+      "module": "financial_accounting_engine.formulas",
+      "signature": "(recoveries: 'Sequence[tuple[float, float]]', eir: 'float') -> 'float'",
+      "requirements": [
+        "FR-037"
+      ],
+      "documentation": "docs/api/recovery_present_value.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "recovery_present_value",
+      "tests": [
+        "tests/test_api.py::test_api_example[recovery_present_value]"
+      ],
+      "return_schema": "float",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "regulatory_bridge",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(instruments: 'Table', ecl_results: 'Table', stages: 'Mapping[str, str]', fx: 'Mapping[str, float]') -> 'list[Row]'",
+      "requirements": [
+        "FR-057"
+      ],
+      "documentation": "docs/api/regulatory_bridge.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "regulatory_bridge",
+      "tests": [
+        "tests/test_api.py::test_api_example[regulatory_bridge]"
+      ],
+      "return_schema": {
+        "type": "table",
+        "fields": {
+          "accounting_value_used_in_regulatory_calculation": [
+            "bool"
+          ],
+          "difference": [
+            "float"
+          ],
+          "formula_id": [
+            "str"
+          ],
+          "ifrs9_ecl": [
+            "float"
+          ],
+          "ifrs9_stage": [
+            "str"
+          ],
+          "instrument_id": [
+            "str"
+          ],
+          "regulatory_approach": [
+            "NoneType"
+          ],
+          "regulatory_default_flag": [
+            "bool"
+          ],
+          "regulatory_expected_loss": [
+            "float"
+          ],
+          "view": [
+            "str"
+          ]
+        }
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "run_dataset",
+      "module": "financial_accounting_engine.workflow",
+      "signature": "(dataset: 'Dataset | str | Path', policy: 'Mapping[str, JSONValue] | None' = None) -> 'AnalysisResult'",
+      "requirements": [
+        "FR-019",
+        "FR-021",
+        "FR-059"
+      ],
+      "documentation": "docs/api/run_dataset.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "run_dataset",
+      "tests": [
+        "tests/test_api.py::test_api_example[run_dataset]"
+      ],
+      "return_schema": {
+        "type": "AnalysisResult",
+        "fields": [
+          "tables",
+          "metrics",
+          "lineage",
+          "status",
+          "official"
+        ]
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "scenario_ecl",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(instrument: 'Row', stage: 'str', pd_curves: 'Table', lgd_profiles: 'Table', ead_profiles: 'Table', probabilities: 'Mapping[str, float]', cashflows: 'Table' = (), reporting_date: 'str | None' = None) -> 'tuple[list[Row], Row]'",
+      "requirements": [
+        "FR-033",
+        "FR-035",
+        "FR-041"
+      ],
+      "documentation": "docs/api/scenario_ecl.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "scenario_ecl",
+      "tests": [
+        "tests/test_api.py::test_api_example[scenario_ecl]"
+      ],
+      "return_schema": {
+        "type": "tuple",
+        "items": [
+          {
+            "type": "table",
+            "fields": {
+              "discounted_ecl": [
+                "float"
+              ],
+              "ead": [
+                "float"
+              ],
+              "formula_id": [
+                "str"
+              ],
+              "instrument_id": [
+                "str"
+              ],
+              "lgd": [
+                "float"
+              ],
+              "marginal_pd": [
+                "float"
+              ],
+              "scenario_id": [
+                "str"
+              ],
+              "year": [
+                "int"
+              ]
+            }
+          },
+          {
+            "instrument_id": "str",
+            "stage": "str",
+            "ecl_method": "str",
+            "weighted_ecl": "float",
+            "poci_initial_lifetime_ecl": "float",
+            "overlay": "float",
+            "final_ecl": "float",
+            "formula_id": "str",
+            "model_version_id": "str"
+          }
+        ]
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "scenario_sensitivity",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(losses: 'Mapping[str, float]', probabilities: 'Mapping[str, float]') -> 'list[Row]'",
+      "requirements": [
+        "FR-039"
+      ],
+      "documentation": "docs/api/scenario_sensitivity.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "scenario_sensitivity",
+      "tests": [
+        "tests/test_api.py::test_api_example[scenario_sensitivity]"
+      ],
+      "return_schema": {
+        "type": "table",
+        "fields": {
+          "probability": [
+            "float"
+          ],
+          "scenario_id": [
+            "str"
+          ],
+          "standalone_ecl": [
+            "float"
+          ],
+          "view": [
+            "str"
+          ],
+          "weighted_contribution": [
+            "float"
+          ]
+        }
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "select_snapshot",
+      "module": "financial_accounting_engine.data",
+      "signature": "(tables: 'Dataset', reporting_date: 'str', knowledge_time: 'str') -> 'dict[str, list[Row]]'",
+      "requirements": [
+        "FR-058"
+      ],
+      "documentation": "docs/api/select_snapshot.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "select_snapshot",
+      "tests": [
+        "tests/test_api.py::test_api_example[select_snapshot]"
+      ],
+      "return_schema": {
+        "instruments": {
+          "type": "table",
+          "fields": {
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "business_model": [
+              "str"
+            ],
+            "contingent_feature": [
+              "NoneType"
+            ],
+            "credit_adjusted_eir": [
+              "int"
+            ],
+            "currency": [
+              "str"
+            ],
+            "designation_approval_id": [
+              "str"
+            ],
+            "ecl_method": [
+              "str"
+            ],
+            "eir": [
+              "float"
+            ],
+            "electronic_payment_election": [
+              "bool"
+            ],
+            "embedded_derivative_separated": [
+              "bool"
+            ],
+            "entity_id": [
+              "str"
+            ],
+            "equity": [
+              "NoneType"
+            ],
+            "fair_value": [
+              "int"
+            ],
+            "fair_value_option": [
+              "bool"
+            ],
+            "fvoci_equity_election": [
+              "NoneType"
+            ],
+            "gross_amount": [
+              "int"
+            ],
+            "guarantee_amount": [
+              "int"
+            ],
+            "held_for_trading": [
+              "NoneType"
+            ],
+            "host_contract_type": [
+              "str"
+            ],
+            "hybrid_contract": [
+              "bool"
+            ],
+            "impairment_scope": [
+              "str"
+            ],
+            "initial_recognition_date": [
+              "str"
+            ],
+            "instrument_id": [
+              "str"
+            ],
+            "instrument_type": [
+              "str"
+            ],
+            "interface_approved": [
+              "bool"
+            ],
+            "interface_decision_id": [
+              "NoneType"
+            ],
+            "interface_standard": [
+              "NoneType"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "liability": [
+              "NoneType"
+            ],
+            "maturity_date": [
+              "str"
+            ],
+            "nature_dependent_contract": [
+              "bool"
+            ],
+            "overlay": [
+              "int"
+            ],
+            "overlay_approved": [
+              "bool"
+            ],
+            "overlay_double_count_checked": [
+              "bool"
+            ],
+            "overlay_expiry": [
+              "NoneType"
+            ],
+            "overlay_id": [
+              "NoneType"
+            ],
+            "overlay_owner": [
+              "NoneType"
+            ],
+            "overlay_thesis": [
+              "NoneType"
+            ],
+            "own_use": [
+              "bool"
+            ],
+            "payment_irrevocable": [
+              "bool"
+            ],
+            "poci": [
+              "NoneType"
+            ],
+            "poci_initial_lifetime_ecl": [
+              "int"
+            ],
+            "portfolio": [
+              "str"
+            ],
+            "provision_rate": [
+              "int"
+            ],
+            "purchaser_net_buyer": [
+              "bool"
+            ],
+            "quantity_consistent_expected_usage": [
+              "bool"
+            ],
+            "rate_type": [
+              "str"
+            ],
+            "recognition_status": [
+              "str"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "regular_way": [
+              "bool"
+            ],
+            "regulatory_approach": [
+              "str"
+            ],
+            "regulatory_default_flag": [
+              "bool"
+            ],
+            "regulatory_expected_loss": [
+              "int"
+            ],
+            "repurchase_within_reasonable_time": [
+              "bool"
+            ],
+            "reset_rate": [
+              "NoneType"
+            ],
+            "sale_timing_uncontrollable": [
+              "bool"
+            ],
+            "scope_assessment": [
+              "str"
+            ],
+            "settlement_risk_insignificant": [
+              "bool"
+            ],
+            "settlement_short_period": [
+              "bool"
+            ],
+            "simplified": [
+              "NoneType"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "trade_date_policy": [
+              "str"
+            ],
+            "transaction_costs": [
+              "int"
+            ],
+            "transaction_price": [
+              "int"
+            ],
+            "undrawn": [
+              "int"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ],
+            "withdrawal_access_practical": [
+              "bool"
+            ]
+          }
+        }
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "split_own_credit",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(market: 'Row', category: 'str') -> 'Row'",
+      "requirements": [
+        "FR-016"
+      ],
+      "documentation": "docs/api/split_own_credit.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "split_own_credit",
+      "tests": [
+        "tests/test_api.py::test_api_example[split_own_credit]"
+      ],
+      "return_schema": {
+        "instrument_id": "str",
+        "total_fv_change": "float",
+        "own_credit_oci": "float",
+        "own_credit_pnl_due_to_mismatch": "float",
+        "other_fv_change_pnl": "float",
+        "formula_id": "str",
+        "source_reference": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "stage_movements",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(stage_results: 'Table') -> 'list[Row]'",
+      "requirements": [
+        "FR-032"
+      ],
+      "documentation": "docs/api/stage_movements.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "stage_movements",
+      "tests": [
+        "tests/test_api.py::test_api_example[stage_movements]"
+      ],
+      "return_schema": {
+        "type": "table",
+        "fields": {
+          "instruments": [
+            "int"
+          ],
+          "prior_stage": [
+            "str"
+          ],
+          "stage": [
+            "str"
+          ]
+        }
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "survival_from_pd",
+      "module": "financial_accounting_engine.formulas",
+      "signature": "(marginal: 'Sequence[float]') -> 'list[float]'",
+      "requirements": [
+        "FR-035"
+      ],
+      "documentation": "docs/api/survival_from_pd.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "survival_from_pd",
+      "tests": [
+        "tests/test_api.py::test_api_example[survival_from_pd]"
+      ],
+      "return_schema": {
+        "type": "list",
+        "items": [
+          "float",
+          "float"
+        ]
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "validate_dataset",
+      "module": "financial_accounting_engine.data",
+      "signature": "(tables: 'Dataset', reporting_date: 'str | None' = None, knowledge_time: 'str | None' = None) -> 'dict[str, list[Row]]'",
+      "requirements": [
+        "FR-058"
+      ],
+      "documentation": "docs/api/validate_dataset.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "validate_dataset",
+      "tests": [
+        "tests/test_api.py::test_api_example[validate_dataset]"
+      ],
+      "return_schema": {
+        "run_control": {
+          "type": "table",
+          "fields": {
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "contract_version": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "knowledge_time": [
+              "str"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "policy_id": [
+              "str"
+            ],
+            "profile_id": [
+              "str"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "reporting_date": [
+              "str"
+            ],
+            "rule_set_id": [
+              "str"
+            ],
+            "run_key": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ],
+            "view": [
+              "str"
+            ]
+          }
+        },
+        "entities": {
+          "type": "table",
+          "fields": {
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "consolidation_scope": [
+              "str"
+            ],
+            "entity_id": [
+              "str"
+            ],
+            "entity_name": [
+              "str"
+            ],
+            "functional_currency": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ]
+          }
+        },
+        "parties": {
+          "type": "table",
+          "fields": {
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "default_flag": [
+              "bool"
+            ],
+            "forbearance": [
+              "bool"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "party_id": [
+              "str"
+            ],
+            "rating_current": [
+              "int"
+            ],
+            "rating_orig": [
+              "int"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ],
+            "watchlist": [
+              "bool"
+            ]
+          }
+        },
+        "instruments": {
+          "type": "table",
+          "fields": {
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "business_model": [
+              "str"
+            ],
+            "contingent_feature": [
+              "NoneType",
+              "str"
+            ],
+            "credit_adjusted_eir": [
+              "float",
+              "int"
+            ],
+            "currency": [
+              "str"
+            ],
+            "designation_approval_id": [
+              "str"
+            ],
+            "ecl_method": [
+              "str"
+            ],
+            "eir": [
+              "float",
+              "int"
+            ],
+            "electronic_payment_election": [
+              "bool"
+            ],
+            "embedded_derivative_separated": [
+              "bool"
+            ],
+            "entity_id": [
+              "str"
+            ],
+            "equity": [
+              "NoneType",
+              "bool"
+            ],
+            "fair_value": [
+              "int"
+            ],
+            "fair_value_option": [
+              "bool"
+            ],
+            "fvoci_equity_election": [
+              "NoneType",
+              "bool"
+            ],
+            "gross_amount": [
+              "int"
+            ],
+            "guarantee_amount": [
+              "int"
+            ],
+            "held_for_trading": [
+              "NoneType",
+              "bool"
+            ],
+            "host_contract_type": [
+              "str"
+            ],
+            "hybrid_contract": [
+              "bool"
+            ],
+            "impairment_scope": [
+              "str"
+            ],
+            "initial_recognition_date": [
+              "str"
+            ],
+            "instrument_id": [
+              "str"
+            ],
+            "instrument_type": [
+              "str"
+            ],
+            "interface_approved": [
+              "bool"
+            ],
+            "interface_decision_id": [
+              "NoneType"
+            ],
+            "interface_standard": [
+              "NoneType"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "liability": [
+              "NoneType",
+              "bool"
+            ],
+            "maturity_date": [
+              "str"
+            ],
+            "nature_dependent_contract": [
+              "bool"
+            ],
+            "overlay": [
+              "int"
+            ],
+            "overlay_approved": [
+              "bool"
+            ],
+            "overlay_double_count_checked": [
+              "bool"
+            ],
+            "overlay_expiry": [
+              "NoneType",
+              "str"
+            ],
+            "overlay_id": [
+              "NoneType",
+              "str"
+            ],
+            "overlay_owner": [
+              "NoneType",
+              "str"
+            ],
+            "overlay_thesis": [
+              "NoneType",
+              "str"
+            ],
+            "own_use": [
+              "bool"
+            ],
+            "payment_irrevocable": [
+              "bool"
+            ],
+            "poci": [
+              "NoneType",
+              "bool"
+            ],
+            "poci_initial_lifetime_ecl": [
+              "int"
+            ],
+            "portfolio": [
+              "str"
+            ],
+            "provision_rate": [
+              "float",
+              "int"
+            ],
+            "purchaser_net_buyer": [
+              "bool"
+            ],
+            "quantity_consistent_expected_usage": [
+              "bool"
+            ],
+            "rate_type": [
+              "str"
+            ],
+            "recognition_status": [
+              "str"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "regular_way": [
+              "bool"
+            ],
+            "regulatory_approach": [
+              "str"
+            ],
+            "regulatory_default_flag": [
+              "bool"
+            ],
+            "regulatory_expected_loss": [
+              "int"
+            ],
+            "repurchase_within_reasonable_time": [
+              "bool"
+            ],
+            "reset_rate": [
+              "NoneType"
+            ],
+            "sale_timing_uncontrollable": [
+              "bool"
+            ],
+            "scope_assessment": [
+              "str"
+            ],
+            "settlement_risk_insignificant": [
+              "bool"
+            ],
+            "settlement_short_period": [
+              "bool"
+            ],
+            "simplified": [
+              "NoneType",
+              "bool"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "trade_date_policy": [
+              "str"
+            ],
+            "transaction_costs": [
+              "float",
+              "int"
+            ],
+            "transaction_price": [
+              "int"
+            ],
+            "undrawn": [
+              "int"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ],
+            "withdrawal_access_practical": [
+              "bool"
+            ]
+          }
+        },
+        "cashflows": {
+          "type": "table",
+          "fields": {
+            "amount": [
+              "float",
+              "int"
+            ],
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "cashflow_id": [
+              "str"
+            ],
+            "cashflow_type": [
+              "str"
+            ],
+            "contractual": [
+              "bool"
+            ],
+            "expected": [
+              "bool"
+            ],
+            "include_in_eir": [
+              "bool"
+            ],
+            "instrument_id": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "scenario_id": [
+              "NoneType",
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ],
+            "year_fraction": [
+              "int"
+            ]
+          }
+        },
+        "opening_balances": {
+          "type": "table",
+          "fields": {
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "instrument_id": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "ledger_allowance": [
+              "int"
+            ],
+            "ledger_gross": [
+              "int"
+            ],
+            "opening_allowance": [
+              "int"
+            ],
+            "opening_fvoci_reserve": [
+              "int"
+            ],
+            "opening_gross": [
+              "int"
+            ],
+            "opening_hedge_reserve": [
+              "int"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ]
+          }
+        },
+        "classification_inputs": {
+          "type": "table",
+          "fields": {
+            "approval_id": [
+              "str"
+            ],
+            "as_of_date": [
+              "str"
+            ],
+            "basic_interest": [
+              "bool"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "business_model": [
+              "str"
+            ],
+            "business_model_change": [
+              "bool"
+            ],
+            "cli_lookthrough_pass": [
+              "bool"
+            ],
+            "contingent_feature_basic": [
+              "bool"
+            ],
+            "de_minimis_or_non_genuine": [
+              "bool"
+            ],
+            "designation": [
+              "str"
+            ],
+            "extension_basic": [
+              "bool"
+            ],
+            "instrument_id": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "leverage": [
+              "bool"
+            ],
+            "modified_time_value_pass": [
+              "bool"
+            ],
+            "non_recourse_pass": [
+              "bool"
+            ],
+            "prepayment_compensation_reasonable": [
+              "bool"
+            ],
+            "principal_consistent": [
+              "bool"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "sppi_override": [
+              "NoneType"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ]
+          }
+        },
+        "collateral": {
+          "type": "table",
+          "fields": {
+            "allocated_amount": [
+              "int"
+            ],
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "collateral_id": [
+              "str"
+            ],
+            "collateral_type": [
+              "str"
+            ],
+            "cost": [
+              "int"
+            ],
+            "fair_value": [
+              "int"
+            ],
+            "haircut": [
+              "float"
+            ],
+            "instrument_id": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "recovery_year": [
+              "int"
+            ],
+            "separately_recognised": [
+              "bool"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ]
+          }
+        },
+        "staging_inputs": {
+          "type": "table",
+          "fields": {
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "collective_assessment": [
+              "bool"
+            ],
+            "credit_impaired": [
+              "bool"
+            ],
+            "days_past_due": [
+              "int"
+            ],
+            "forbearance": [
+              "bool"
+            ],
+            "forward_looking_sicr": [
+              "bool"
+            ],
+            "impairment_scope": [
+              "str"
+            ],
+            "instrument_id": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "lifetime_pd_current": [
+              "NoneType"
+            ],
+            "lifetime_pd_orig": [
+              "NoneType"
+            ],
+            "low_credit_risk": [
+              "bool"
+            ],
+            "months_since_cure": [
+              "int"
+            ],
+            "months_since_forbearance": [
+              "int"
+            ],
+            "override_approved": [
+              "bool"
+            ],
+            "override_expiry": [
+              "NoneType"
+            ],
+            "override_reason": [
+              "NoneType"
+            ],
+            "poci": [
+              "bool"
+            ],
+            "prior_stage": [
+              "str"
+            ],
+            "rating_current": [
+              "int"
+            ],
+            "rating_orig": [
+              "int"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "sicr_override": [
+              "NoneType"
+            ],
+            "sicr_rebuttal": [
+              "bool"
+            ],
+            "simplified": [
+              "bool"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "unlikely_to_pay": [
+              "bool"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ],
+            "watchlist": [
+              "bool"
+            ]
+          }
+        },
+        "pd_curves": {
+          "type": "table",
+          "fields": {
+            "approval_id": [
+              "str"
+            ],
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "instrument_id": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "marginal_pd": [
+              "float"
+            ],
+            "model_owner": [
+              "str"
+            ],
+            "model_version_id": [
+              "str"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "scenario_id": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "validation_status": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ],
+            "year": [
+              "int"
+            ]
+          }
+        },
+        "lgd_profiles": {
+          "type": "table",
+          "fields": {
+            "approval_id": [
+              "str"
+            ],
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "instrument_id": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "lgd": [
+              "float",
+              "int"
+            ],
+            "model_owner": [
+              "str"
+            ],
+            "model_version_id": [
+              "str"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "recovery_present_value": [
+              "float",
+              "int"
+            ],
+            "resolution_path": [
+              "str"
+            ],
+            "scenario_id": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "validation_status": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ],
+            "workout_cost": [
+              "int"
+            ],
+            "year": [
+              "int"
+            ]
+          }
+        },
+        "ead_profiles": {
+          "type": "table",
+          "fields": {
+            "approval_id": [
+              "str"
+            ],
+            "as_of_date": [
+              "str"
+            ],
+            "behavioural_horizon_years": [
+              "int"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "ccf": [
+              "float",
+              "int"
+            ],
+            "ead": [
+              "float",
+              "int"
+            ],
+            "instrument_id": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "model_owner": [
+              "str"
+            ],
+            "model_version_id": [
+              "str"
+            ],
+            "prepayment_rate": [
+              "int"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "scenario_id": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "validation_status": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ],
+            "year": [
+              "int"
+            ]
+          }
+        },
+        "scenarios": {
+          "type": "table",
+          "fields": {
+            "approved_at": [
+              "str"
+            ],
+            "approved_by": [
+              "str"
+            ],
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "forecast_horizon_years": [
+              "int"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "mean_reversion_method": [
+              "str"
+            ],
+            "probability": [
+              "float"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "scenario_id": [
+              "str"
+            ],
+            "scenario_version": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ]
+          }
+        },
+        "events": {
+          "type": "table",
+          "fields": {
+            "amount": [
+              "int"
+            ],
+            "approved": [
+              "bool"
+            ],
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "continuing_involvement_amount": [
+              "int"
+            ],
+            "control_retained": [
+              "bool"
+            ],
+            "derecognition_approved": [
+              "bool"
+            ],
+            "event_date": [
+              "str"
+            ],
+            "event_id": [
+              "str"
+            ],
+            "event_type": [
+              "str"
+            ],
+            "instrument_id": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "modified_present_value": [
+              "int"
+            ],
+            "partial_transfer": [
+              "NoneType"
+            ],
+            "pass_through_arrangement": [
+              "NoneType"
+            ],
+            "qualitative_substantial": [
+              "bool"
+            ],
+            "reason_code": [
+              "str"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "risks_rewards_retained": [
+              "bool"
+            ],
+            "risks_rewards_transferred": [
+              "bool"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "ten_percent_ratio": [
+              "float",
+              "int"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ]
+          }
+        },
+        "market_data": {
+          "type": "table",
+          "fields": {
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "day_one_difference": [
+              "int"
+            ],
+            "fair_value": [
+              "int"
+            ],
+            "fx_rate": [
+              "float",
+              "int"
+            ],
+            "ifrs13_level": [
+              "int"
+            ],
+            "instrument_id": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "market_data_id": [
+              "str"
+            ],
+            "own_credit_change": [
+              "int"
+            ],
+            "own_credit_oci_mismatch": [
+              "bool"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "total_fv_change": [
+              "int"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "valuation_model": [
+              "str"
+            ],
+            "valuation_status": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ]
+          }
+        },
+        "hedges": {
+          "type": "table",
+          "fields": {
+            "as_of_date": [
+              "str"
+            ],
+            "basis_adjustment": [
+              "int"
+            ],
+            "basis_spread_change": [
+              "int"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "credit_risk_dominates": [
+              "bool"
+            ],
+            "designated": [
+              "bool"
+            ],
+            "designation_documented": [
+              "bool"
+            ],
+            "discontinue": [
+              "bool"
+            ],
+            "economic_relationship": [
+              "bool"
+            ],
+            "forecast_transaction_expected": [
+              "bool"
+            ],
+            "forward_element_change": [
+              "int"
+            ],
+            "hedge_ratio": [
+              "float",
+              "int"
+            ],
+            "hedge_type": [
+              "str"
+            ],
+            "hedged_change": [
+              "int"
+            ],
+            "hedged_item_eligible": [
+              "bool"
+            ],
+            "hedging_change": [
+              "int"
+            ],
+            "hedging_instrument_eligible": [
+              "bool"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "nature_dependent_electricity_hedge": [
+              "bool"
+            ],
+            "option_time_value_change": [
+              "int"
+            ],
+            "rebalancing_required": [
+              "bool"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "recycle_amount": [
+              "int"
+            ],
+            "relationship_id": [
+              "str"
+            ],
+            "risk_component_eligible": [
+              "bool"
+            ],
+            "risk_management_objective": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "target_hedge_ratio": [
+              "int"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "variable_nominal_volume": [
+              "bool"
+            ],
+            "version_no": [
+              "int"
+            ],
+            "volume_assumptions_documented": [
+              "bool"
+            ]
+          }
+        },
+        "parameters": {
+          "type": "table",
+          "fields": {
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "parameter_id": [
+              "str"
+            ],
+            "parameter_value": [
+              "str"
+            ],
+            "policy_id": [
+              "str"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "rule_set_id": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_reference": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "unit": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ]
+          }
+        },
+        "mappings": {
+          "type": "table",
+          "fields": {}
+        },
+        "backtesting": {
+          "type": "table",
+          "fields": {
+            "actual_value": [
+              "float",
+              "int"
+            ],
+            "approval_id": [
+              "str"
+            ],
+            "as_of_date": [
+              "str"
+            ],
+            "business_key": [
+              "str"
+            ],
+            "challenger_flag": [
+              "bool"
+            ],
+            "exposure_weight": [
+              "int"
+            ],
+            "is_official": [
+              "bool"
+            ],
+            "known_from": [
+              "str"
+            ],
+            "known_to": [
+              "str"
+            ],
+            "model_owner": [
+              "str"
+            ],
+            "model_type": [
+              "str"
+            ],
+            "model_version_id": [
+              "str"
+            ],
+            "observation_date": [
+              "str"
+            ],
+            "observation_id": [
+              "str"
+            ],
+            "outcome_flag": [
+              "bool"
+            ],
+            "predicted_value": [
+              "float",
+              "int"
+            ],
+            "record_id": [
+              "str"
+            ],
+            "record_status": [
+              "str"
+            ],
+            "release_amount": [
+              "int"
+            ],
+            "segment": [
+              "str"
+            ],
+            "source_record_id": [
+              "str"
+            ],
+            "source_system": [
+              "str"
+            ],
+            "valid_from": [
+              "str"
+            ],
+            "valid_to": [
+              "str"
+            ],
+            "validation_status": [
+              "str"
+            ],
+            "version_no": [
+              "int"
+            ]
+          }
+        }
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "validate_hedge_designation",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(relationship: 'Row') -> 'Row'",
+      "requirements": [
+        "FR-044"
+      ],
+      "documentation": "docs/api/validate_hedge_designation.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "validate_hedge_designation",
+      "tests": [
+        "tests/test_api.py::test_api_example[validate_hedge_designation]"
+      ],
+      "return_schema": {
+        "relationship_id": "str",
+        "eligible": "bool",
+        "status": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "validate_overlay",
+      "module": "financial_accounting_engine.domains",
+      "signature": "(overlay: 'Row', reporting_date: 'str') -> 'Row'",
+      "requirements": [
+        "FR-042"
+      ],
+      "documentation": "docs/api/validate_overlay.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "validate_overlay",
+      "tests": [
+        "tests/test_api.py::test_api_example[validate_overlay]"
+      ],
+      "return_schema": {
+        "overlay_id": "str",
+        "amount": "int",
+        "status": "str"
+      },
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "weighted_ecl",
+      "module": "financial_accounting_engine.formulas",
+      "signature": "(scenario_losses: 'Mapping[str, float]', probabilities: 'Mapping[str, float]') -> 'float'",
+      "requirements": [
+        "FR-039"
+      ],
+      "documentation": "docs/api/weighted_ecl.rst",
+      "example": "examples/analyst_workbook.py",
+      "example_key": "weighted_ecl",
+      "tests": [
+        "tests/test_api.py::test_api_example[weighted_ecl]"
+      ],
+      "return_schema": "float",
+      "status": "IMPLEMENTED"
+    }
+  ],
+  "classes": [
+    "AccountingError",
+    "AnalysisResult",
+    "ResourceError",
+    "ValidationError"
+  ],
+  "constants": [
+    "__version__"
+  ]
+}

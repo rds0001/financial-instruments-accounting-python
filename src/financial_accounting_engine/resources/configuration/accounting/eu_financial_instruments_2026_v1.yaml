@@ -1,0 +1,26 @@
+# Copyright 2026 RiskDataScience GmbH
+# SPDX-License-Identifier: Apache-2.0
+policy_id: EU_FINANCIAL_INSTRUMENTS_2026_V1
+version: 1.0.0
+reporting_date: '2026-12-31'
+knowledge_time: '2026-09-02T12:00:00+02:00'
+jurisdiction: EU_DE
+reporting_scope: CONSOLIDATED_GROUP
+presentation_currency: EUR
+regular_way_policy: TRADE_DATE
+electronic_payment_derecognition_election: true
+hedge_accounting_policy: IFRS9_GENERAL
+low_credit_risk_relief: false
+past_due_sicr_days: 30
+default_backstop_days: 90
+rating_notch_sicr: 2
+absolute_lifetime_pd_sicr: 0.05
+relative_lifetime_pd_sicr: 2.0
+cure_months: 3
+probation_months: 12
+scenario_weight_tolerance: 0.000000001
+money_rounding: HALF_EVEN
+money_decimals: 2
+day_count: ACT_365
+official_status_limit: APPROVED_REFERENCE
+source_rule_set: FIA_RULES_2026_V1
