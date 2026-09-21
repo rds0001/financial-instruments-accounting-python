@@ -38,6 +38,7 @@ REQUIRED = {
     ".github/CODEOWNERS",
     ".github/dependabot.yml",
     ".github/workflows/ci.yml",
+    ".github/workflows/publish.yml",
     "src/financial_accounting_engine/__init__.py",
     "src/financial_accounting_engine/py.typed",
     "tests/golden_cases.json",

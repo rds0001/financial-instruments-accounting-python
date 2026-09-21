@@ -5,9 +5,17 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "financial-instruments-accounting"
 version = "1.0.0"
-description = "Granular financial instrument accounting, impairment and audit reference library"
+description = "Auditable financial instrument accounting calculations and reference workflows"
 readme = "README.md"
 requires-python = ">=3.10"
+keywords = [
+  "accounting",
+  "expected-credit-loss",
+  "financial-instruments",
+  "hedge-accounting",
+  "impairment",
+  "risk-management",
+]
 license = "Apache-2.0"
 license-files = ["LICENSE", "NOTICE"]
 authors = [{name = "RiskDataScience GmbH"}]
@@ -15,7 +23,10 @@ maintainers = [{name = "RiskDataScience GmbH", email = "riskdatascience@web.de"}
 dependencies = ["openpyxl==3.1.5", "PyYAML==6.0.3"]
 classifiers = [
   "Development Status :: 4 - Beta",
+  "Intended Audience :: Financial and Insurance Industry",
+  "Operating System :: OS Independent",
   "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
@@ -27,6 +38,8 @@ classifiers = [
 [project.urls]
 Source = "https://github.com/rds0001/financial-instruments-accounting-python"
 Issues = "https://github.com/rds0001/financial-instruments-accounting-python/issues"
+Documentation = "https://github.com/rds0001/financial-instruments-accounting-python/tree/main/docs"
+Changelog = "https://github.com/rds0001/financial-instruments-accounting-python/blob/main/CHANGELOG.md"
 Imprint = "https://riskdatascience.net/impressum/"
 "Privacy Policy" = "https://riskdatascience.net/datenschutzerklaerung/"
 
